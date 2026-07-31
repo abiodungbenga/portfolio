@@ -1,0 +1,20 @@
+{
+  "short_name": "Gbenga Dev",
+  "name": "Gbenga Abiodun - Mobile Developer Portfolio",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#1b1b1c",
+  "theme_color": "#008838",
+  "display": "standalone"
+}
