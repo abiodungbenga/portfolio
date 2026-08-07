@@ -1,708 +1,1017 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Gbenga Abiodun | Premium Mobile Developer &amp; Flutter Expert
+    </title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gbenga Abiodun | Premium Mobile Developer &amp; Flutter Expert</title>
+    <!-- SEO Metadata -->
+    <meta
+      name="description"
+      content="Portfolio of Gbenga Abiodun - Senior Mobile Developer specializing in Flutter, Native Android (Kotlin and Jetpack Compose), Firebase, and high-performance UI/UX engineering."
+    />
+    <meta
+      name="keywords"
+      content="Gbenga Abiodun, Flutter Developer, Jetpack Compose, Android Developer, Mobile Architect, Dart, Kotlin, Firebase, UI UX Engineer"
+    />
+    <meta name="author" content="Gbenga Abiodun" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://gbengaabiodun.com/" />
 
-  <!-- SEO Metadata -->
-  <meta name="description"
-    content="Portfolio of Gbenga Abiodun - Senior Mobile Developer specializing in Flutter, Native Android (Kotlin and Jetpack Compose), Firebase, and high-performance UI/UX engineering.">
-  <meta name="keywords"
-    content="Gbenga Abiodun, Flutter Developer, Jetpack Compose, Android Developer, Mobile Architect, Dart, Kotlin, Firebase, UI UX Engineer">
-  <meta name="author" content="Gbenga Abiodun">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://gbengaabiodun.com/">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gbengaabiodun.com/" />
+    <meta
+      property="og:title"
+      content="Gbenga Abiodun | Mobile Application Engineer &amp; Flutter Expert"
+    />
+    <meta
+      property="og:description"
+      content="Great apps don't chase downloads; they earn loyalty. I build mobile apps that users love, businesses trust, and teams can confidently scale."
+    />
+    <meta property="og:image" content="profile.jpeg" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://gbengaabiodun.com/">
-  <meta property="og:title" content="Gbenga Abiodun | Mobile Application Engineer &amp; Flutter Expert">
-  <meta property="og:description"
-    content="Great apps don't chase downloads; they earn loyalty. I build mobile apps that users love, businesses trust, and teams can confidently scale.">
-  <meta property="og:image" content="profile.jpeg">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AGE170" />
+    <meta
+      name="twitter:title"
+      content="Gbenga Abiodun | Flutter &amp; Jetpack Compose Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Great apps don't chase downloads; they earn loyalty. I build mobile apps that users love, businesses trust, and teams can confidently scale."
+    />
+    <meta name="twitter:image" content="profile.jpeg" />
 
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@AGE170">
-  <meta name="twitter:title" content="Gbenga Abiodun | Flutter &amp; Jetpack Compose Developer">
-  <meta name="twitter:description"
-    content="Great apps don't chase downloads; they earn loyalty. I build mobile apps that users love, businesses trust, and teams can confidently scale.">
-  <meta name="twitter:image" content="profile.jpeg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Circular SVG favicon (overrides favicon.ico in modern browsers) -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23008838'/%3E%3Cstop offset='100%25' stop-color='%233cff9c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='32' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial%2CSans-serif' font-weight='700' font-size='36' fill='white' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!-- Circular SVG favicon (overrides favicon.ico in modern browsers) -->
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23008838'/%3E%3Cstop offset='100%25' stop-color='%233cff9c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='32' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial%2CSans-serif' font-weight='700' font-size='36' fill='white' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="manifest.json">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap"
-    rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gbenga Abiodun",
+        "jobTitle": "Mobile Application Developer",
+        "email": "gbengaemma22@gmail.com",
+        "url": "https://gbengaabiodun.com",
+        "sameAs": [
+          "https://github.com/abiodungbenga",
+          "https://www.linkedin.com/in/abiodemma",
+          "https://x.com/AGE170",
+          "https://wa.me/2349138186491"
+        ],
+        "knowsAbout": [
+          "Flutter",
+          "Jetpack Compose",
+          "Dart",
+          "Kotlin",
+          "Android Development",
+          "Firebase",
+          "REST APIs"
+        ]
+      }
+    </script>
 
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Gbenga Abiodun",
-    "jobTitle": "Mobile Application Developer",
-    "email": "gbengaemma22@gmail.com",
-    "url": "https://gbengaabiodun.com",
-    "sameAs": ["https://github.com/abiodungbenga","https://www.linkedin.com/in/abiodemma","https://x.com/AGE170","https://wa.me/2349138186491"],
-    "knowsAbout": ["Flutter","Jetpack Compose","Dart","Kotlin","Android Development","Firebase","REST APIs"]
-  }
-  </script>
+    <!-- Extra icon-specific CSS -->
+    <style>
+      /* Ensure all brand icons render at correct dimensions */
+      .si-icon {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
 
-  <!-- Extra icon-specific CSS -->
-  <style>
-    /* Ensure all brand icons render at correct dimensions */
-    .si-icon {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
+      .service-icon .si-icon {
+        width: 30px;
+        height: 30px;
+      }
 
-    .service-icon .si-icon {
-      width: 30px;
-      height: 30px;
-    }
+      .tech-badge-icon {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+      }
 
-    .tech-badge-icon {
-      width: 22px;
-      height: 22px;
-      object-fit: contain;
-    }
+      .social-icon-btn img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        filter: invert(0.6);
+      }
 
-    .social-icon-btn img {
-      width: 20px;
-      height: 20px;
-      object-fit: contain;
-      filter: invert(0.6);
-    }
+      .social-icon-btn:hover img {
+        filter: invert(1);
+      }
 
-    .social-icon-btn:hover img {
-      filter: invert(1);
-    }
+      [data-theme="light"] .social-icon-btn img {
+        filter: invert(0.3);
+      }
 
-    [data-theme="light"] .social-icon-btn img {
-      filter: invert(0.3);
-    }
+      [data-theme="light"] .social-icon-btn:hover img {
+        filter: invert(0);
+      }
+    </style>
+  </head>
 
-    [data-theme="light"] .social-icon-btn:hover img {
-      filter: invert(0);
-    }
-  </style>
-</head>
+  <body>
+    <!-- Mouse Spotlight Ambient Glow -->
+    <div id="mouse-spotlight"></div>
 
-<body>
+    <!-- Scroll Progress Top Bar -->
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
 
-  <!-- Mouse Spotlight Ambient Glow -->
-  <div id="mouse-spotlight"></div>
-
-  <!-- Scroll Progress Top Bar -->
-  <div class="scroll-progress-bar" id="scroll-progress"></div>
-
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="preloader-logo">GBENGA.</div>
-    <div class="preloader-bar-bg">
-      <div class="preloader-bar-fill"></div>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="preloader-logo">GBENGA.</div>
+      <div class="preloader-bar-bg">
+        <div class="preloader-bar-fill"></div>
+      </div>
     </div>
-  </div>
 
-  <!-- ====================== NAVBAR ====================== -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-container">
-      <a href="#hero" class="nav-logo">
-        <span class="nav-logo-text">Gbenga</span>
-        <span class="nav-logo-dot"></span>
-      </a>
+    <!-- ====================== NAVBAR ====================== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="nav-logo">
+          <span class="nav-logo-text">Gbenga</span>
+          <span class="nav-logo-dot"></span>
+        </a>
 
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#hero" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#tech" class="nav-link">Tech</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+        <nav>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#tech" class="nav-link">Tech</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
 
-      <div class="nav-actions">
-        <!-- Theme toggle -->
-        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark / Light Mode">
-          <span id="theme-icon">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
+        <div class="nav-actions">
+          <!-- Theme toggle -->
+          <button
+            class="theme-toggle-btn"
+            id="theme-toggle-btn"
+            aria-label="Toggle Dark / Light Mode"
+          >
+            <span id="theme-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"
+                />
+              </svg>
+            </span>
+          </button>
+
+          <!-- Mobile hamburger -->
+          <button
+            class="mobile-menu-btn"
+            id="mobile-menu-btn"
+            aria-label="Open Navigation Menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-          </span>
-        </button>
+          </button>
+        </div>
+      </div>
+    </header>
 
-        <!-- Mobile hamburger -->
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Navigation Menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 6h16M4 12h16M4 18h16" />
+    <!-- ====================== HERO ====================== -->
+    <section class="hero" id="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="bg-blob blob-1"></div>
+      <div class="bg-blob blob-2"></div>
+      <div class="bg-blob blob-3"></div>
+
+      <div class="container hero-content">
+        <!-- Left: Text -->
+        <div class="hero-text-side">
+          <div class="hero-badge reveal-fade-up">
+            <span class="badge-dot"></span> Available for New Opportunities
+          </div>
+
+          <h1 class="hero-title reveal-fade-up">
+            Hi, I'm <span class="name-gradient">Gbenga Abiodun</span>
+          </h1>
+
+          <div class="hero-subtitle-wrapper reveal-fade-up">
+            <span>I will be your&nbsp;</span>
+            <span class="typing-text" id="typing-target"></span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-tagline reveal-fade-up">
+            Great apps don't chase downloads they earn loyalty. I build mobile
+            apps that users love, businesses trust, and teams can confidently
+            scale.
+          </p>
+
+          <div class="hero-buttons reveal-fade-up">
+            <a href="#contact" class="btn btn-primary">
+              Hire Me
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <a href="profile.jpeg" download class="btn btn-outline">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"
+                />
+              </svg>
+              Download CV
+            </a>
+          </div>
+
+          <!-- Social icons -->
+          <div class="social-links reveal-fade-up">
+            <a
+              href="https://github.com/abiodungbenga"
+              target="_blank"
+              rel="noopener"
+              class="social-icon-btn"
+              aria-label="GitHub"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abiodemma"
+              target="_blank"
+              rel="noopener"
+              class="social-icon-btn"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://x.com/AGE170"
+              target="_blank"
+              rel="noopener"
+              class="social-icon-btn"
+              aria-label="Twitter / X"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/2349138186491"
+              target="_blank"
+              rel="noopener"
+              class="social-icon-btn"
+              aria-label="WhatsApp"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Profile photo -->
+        <div class="hero-image-side reveal-scale">
+          <div class="profile-card-glow">
+            <div class="profile-card-inner">
+              <img
+                src="profile.jpeg"
+                alt="Gbenga Abiodun – Flutter & Android Developer"
+                class="profile-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== ABOUT ====================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Architecting High Performance Apps</h2>
+          <p class="section-description">
+            Combining engineering rigor with pixel-perfect design aesthetics.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card reveal-fade-left">
+            <p>
+              I'm a mobile developer who builds Flutter and Jetpack Compose
+              applications that are as performant under the hood as they are
+              delightful on screen. My work sits at the intersection of
+              engineering and design: I obsess over system architecture and
+              clean, scalable code, but I never lose sight of the person who'll
+              actually be tapping through the app.
+            </p>
+            <p>
+              I believe great mobile experiences come from getting the small
+              things right smooth animations, intuitive flows, and interfaces
+              that feel effortless backed by architecture that holds up as
+              products grow. Beyond shipping features, I'm constantly
+              experimenting with new tools and patterns in the Flutter and
+              Compose ecosystems to keep my craft sharp. What drives me isn't
+              just solving technical problems it's building applications people
+              genuinely enjoy using.
+            </p>
+          </div>
+
+          <div class="about-stats-grid">
+            <div class="stat-box reveal-scale">
+              <div class="stat-number" data-target="4+">0+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-box reveal-scale">
+              <div class="stat-number" data-target="10+">0+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-box reveal-scale">
+              <div
+                class="stat-number"
+                style="
+                  -webkit-text-fill-color: var(--primary-glow);
+                  font-size: 1.6rem;
+                "
+              >
+                Flutter Development
+              </div>
+              <div class="stat-label">Expert</div>
+            </div>
+            <div class="stat-box reveal-scale">
+              <div
+                class="stat-number"
+                style="
+                  -webkit-text-fill-color: var(--primary-glow);
+                  font-size: 1.6rem;
+                "
+              >
+                Jetpack Compose
+              </div>
+              <div class="stat-label">Expert</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SERVICES ====================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">Services</span>
+          <h2 class="section-title">What I Can Build For You</h2>
+          <p class="section-description">
+            Building modern, scalable mobile applications from concept and
+            design to development, deployment, and ongoing support.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Flutter Mobile Apps -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon">
+              <img src="flutter.png" class="si-icon" alt="Flutter icon" />
+            </div>
+            <h3 class="service-title">Flutter Mobile Apps</h3>
+            <p class="service-desc">
+              Cross-platform iOS &amp; Android applications with 60fps
+              performance and native feel.
+            </p>
+          </div>
+
+          <!-- Jetpack Compose -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon">
+              <img
+                src="https://cdn.simpleicons.org/android/3DDC84"
+                class="si-icon"
+                alt="Android icon"
+              />
+            </div>
+            <h3 class="service-title">Android with Jetpack Compose</h3>
+            <p class="service-desc">
+              Modern declarative native Android apps leveraging Kotlin &amp;
+              modern architecture components.
+            </p>
+          </div>
+
+          <!-- Flutter Web -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon">
+              <img src="flutter.png" class="si-icon" alt="Flutter Web icon" />
+            </div>
+            <h3 class="service-title">Flutter Web Applications</h3>
+            <p class="service-desc">
+              Fast responsive single-page web experiences sharing code directly
+              with mobile apps.
+            </p>
+          </div>
+
+          <!-- Firebase -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon">
+              <img
+                src="https://cdn.simpleicons.org/firebase/FFCA28"
+                class="si-icon"
+                alt="Firebase icon"
+              />
+            </div>
+            <h3 class="service-title">Firebase Integration</h3>
+            <p class="service-desc">
+              Realtime Database, Firestore, Authentication, Cloud Functions
+              &amp; Push Notifications.
+            </p>
+          </div>
+
+          <!-- REST API -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon">
+              <img
+                src="https://cdn.simpleicons.org/fastapi/009688"
+                class="si-icon"
+                alt="API icon"
+              />
+            </div>
+            <h3 class="service-title">REST API Integration</h3>
+            <p class="service-desc">
+              Robust network layer integration using Retrofit, Dio, HTTP clients
+              &amp; caching strategy.
+            </p>
+          </div>
+
+          <!-- Kotlin for Android -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon">
+              <img
+                src="https://cdn.simpleicons.org/kotlin/7F52FF"
+                class="si-icon"
+                alt="Kotlin icon"
+              />
+            </div>
+            <h3 class="service-title">Kotlin for Android</h3>
+            <p class="service-desc">
+              Building robust, idiomatic native Android apps with Kotlin — clean
+              architecture, coroutines &amp; modern Android APIs.
+            </p>
+          </div>
+
+          <!-- Jetpack Compose -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon">
+              <img
+                src="jetpack compose.png"
+                class="si-icon"
+                alt="Jetpack Compose icon"
+              />
+            </div>
+            <h3 class="service-title">Jetpack Compose UI</h3>
+            <p class="service-desc">
+              Crafting declarative, beautiful native Android UIs with Jetpack
+              Compose, Material 3 &amp; smooth state-driven animations.
+            </p>
+          </div>
+
+          <!-- Admin Dashboards -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon">
+              <img
+                src="admin_dashboard.png"
+                class="si-icon"
+                alt="Dashboard icon"
+              />
+            </div>
+            <h3 class="service-title">Admin Dashboards</h3>
+            <p class="service-desc">
+              Interactive administrative control panels for data analytics and
+              real-time monitoring.
+            </p>
+          </div>
+
+          <!-- App Store Deployment -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon">
+              <img src="playstore.png" class="si-icon" alt="App Store icon" />
+            </div>
+            <h3 class="service-title">App Store Deployment</h3>
+            <p class="service-desc">
+              Publishing to Google Play Store &amp; Apple App Store with CI/CD
+              pipelines.
+            </p>
+          </div>
+
+          <!-- UI/UX -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon">
+              <img src="figma.png" class="si-icon" alt="Figma icon" />
+            </div>
+            <h3 class="service-title">UI/UX Implementation</h3>
+            <p class="service-desc">
+              Translating Figma designs into pixel-perfect responsive code with
+              fluid animations.
+            </p>
+          </div>
+
+          <!-- Performance -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon">
+              <img
+                src="performance.png"
+                class="si-icon"
+                alt="Performance icon"
+              />
+            </div>
+            <h3 class="service-title">Performance Optimization</h3>
+            <p class="service-desc">
+              Eliminating lag, optimizing memory allocation, widget rebuilding
+              and cold start times.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SKILLS ====================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">Skills &amp; Proficiency</span>
+          <h2 class="section-title">Technical Mastery</h2>
+          <p class="section-description">
+            Core technologies and skill proficiency levels.
+          </p>
+        </div>
+
+        <div class="skills-container">
+          <!-- SVG Gradient definition (used by rings) -->
+          <svg
+            style="width: 0; height: 0; position: absolute"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient
+                id="ringGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#008838" />
+                <stop offset="50%" stop-color="#00b74a" />
+                <stop offset="100%" stop-color="#3cff9c" />
+              </linearGradient>
+            </defs>
           </svg>
-        </button>
-      </div>
-    </div>
-  </header>
 
-  <!-- ====================== HERO ====================== -->
-  <section class="hero" id="hero">
-    <canvas id="hero-canvas"></canvas>
-    <div class="bg-blob blob-1"></div>
-    <div class="bg-blob blob-2"></div>
-    <div class="bg-blob blob-3"></div>
+          <!-- Circular progress rings -->
+          <div class="progress-rings-grid">
+            <div class="progress-ring-card reveal-fade-up" data-percent="95">
+              <div class="ring-wrapper">
+                <svg class="ring-svg" viewBox="0 0 100 100">
+                  <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
+                  <circle class="ring-circle-val" cx="50" cy="50" r="45" />
+                </svg>
+                <span class="ring-text">95%</span>
+              </div>
+              <span class="ring-label">Flutter</span>
+            </div>
+            <div class="progress-ring-card reveal-fade-up" data-percent="90">
+              <div class="ring-wrapper">
+                <svg class="ring-svg" viewBox="0 0 100 100">
+                  <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
+                  <circle class="ring-circle-val" cx="50" cy="50" r="45" />
+                </svg>
+                <span class="ring-text">90%</span>
+              </div>
+              <span class="ring-label">Jetpack Compose</span>
+            </div>
+            <div class="progress-ring-card reveal-fade-up" data-percent="95">
+              <div class="ring-wrapper">
+                <svg class="ring-svg" viewBox="0 0 100 100">
+                  <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
+                  <circle class="ring-circle-val" cx="50" cy="50" r="45" />
+                </svg>
+                <span class="ring-text">95%</span>
+              </div>
+              <span class="ring-label">Dart</span>
+            </div>
+            <div class="progress-ring-card reveal-fade-up" data-percent="90">
+              <div class="ring-wrapper">
+                <svg class="ring-svg" viewBox="0 0 100 100">
+                  <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
+                  <circle class="ring-circle-val" cx="50" cy="50" r="45" />
+                </svg>
+                <span class="ring-text">90%</span>
+              </div>
+              <span class="ring-label">Kotlin</span>
+            </div>
+            <div class="progress-ring-card reveal-fade-up" data-percent="90">
+              <div class="ring-wrapper">
+                <svg class="ring-svg" viewBox="0 0 100 100">
+                  <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
+                  <circle class="ring-circle-val" cx="50" cy="50" r="45" />
+                </svg>
+                <span class="ring-text">90%</span>
+              </div>
+              <span class="ring-label">Firebase</span>
+            </div>
+            <div class="progress-ring-card reveal-fade-up" data-percent="85">
+              <div class="ring-wrapper">
+                <svg class="ring-svg" viewBox="0 0 100 100">
+                  <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
+                  <circle class="ring-circle-val" cx="50" cy="50" r="45" />
+                </svg>
+                <span class="ring-text">85%</span>
+              </div>
+              <span class="ring-label">UI/UX Engineering</span>
+            </div>
+          </div>
 
-    <div class="container hero-content">
-      <!-- Left: Text -->
-      <div class="hero-text-side">
-        <div class="hero-badge reveal-fade-up">
-          <span class="badge-dot"></span> Available for New Opportunities
-        </div>
+          <!-- Skill badge cards — all icons via Simple Icons CDN -->
+          <div class="skills-grid">
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img src="flutter.png" class="si-icon" alt="Flutter" />
+              </div>
+              <span class="skill-name">Flutter</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img
+                  src="jetpack compose.png"
+                  class="si-icon"
+                  alt="Jetpack Compose"
+                />
+              </div>
+              <span class="skill-name">Jetpack Compose</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img src="dart.png" class="si-icon" alt="Dart" />
+              </div>
+              <span class="skill-name">Dart</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.simpleicons.org/kotlin/7F52FF"
+                  class="si-icon"
+                  alt="Kotlin"
+                />
+              </div>
+              <span class="skill-name">Kotlin</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.simpleicons.org/firebase/FFCA28"
+                  class="si-icon"
+                  alt="Firebase"
+                />
+              </div>
+              <span class="skill-name">Firebase</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.simpleicons.org/fastapi/009688"
+                  class="si-icon"
+                  alt="REST APIs"
+                />
+              </div>
+              <span class="skill-name">REST APIs</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.simpleicons.org/graphql/E10098"
+                  class="si-icon"
+                  alt="GraphQL"
+                />
+              </div>
+              <span class="skill-name">GraphQL</span>
+            </div>
 
-        <h1 class="hero-title reveal-fade-up">
-          Hi, I'm <span class="name-gradient">Gbenga Abiodun</span>
-        </h1>
-
-        <div class="hero-subtitle-wrapper reveal-fade-up">
-          <span>I will be your&nbsp;</span>
-          <span class="typing-text" id="typing-target"></span>
-          <span class="typing-cursor"></span>
-        </div>
-
-        <p class="hero-tagline reveal-fade-up">
-          Great apps don't chase downloads they earn loyalty. I build mobile apps that users love, businesses trust,
-          and teams can confidently scale.
-        </p>
-
-        <div class="hero-buttons reveal-fade-up">
-          <a href="#contact" class="btn btn-primary">
-            Hire Me
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-          <a href="profile.jpeg" download class="btn btn-outline">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
-            </svg>
-            Download CV
-          </a>
-        </div>
-
-        <!-- Social icons -->
-        <div class="social-links reveal-fade-up">
-          <a href="https://github.com/abiodungbenga" target="_blank" rel="noopener" class="social-icon-btn"
-            aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/in/abiodemma" target="_blank" rel="noopener" class="social-icon-btn"
-            aria-label="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-            </svg>
-          </a>
-          <a href="https://x.com/AGE170" target="_blank" rel="noopener" class="social-icon-btn"
-            aria-label="Twitter / X">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-            </svg>
-          </a>
-          <a href="https://wa.me/2349138186491" target="_blank" rel="noopener" class="social-icon-btn"
-            aria-label="WhatsApp">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Right: Profile photo -->
-      <div class="hero-image-side reveal-scale">
-        <div class="profile-card-glow">
-          <div class="profile-card-inner">
-            <img src="profile.jpeg" alt="Gbenga Abiodun – Flutter & Android Developer" class="profile-img">
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.simpleicons.org/docker/2496ED"
+                  class="si-icon"
+                  alt="Docker"
+                />
+              </div>
+              <span class="skill-name">Docker</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.simpleicons.org/git/F05032"
+                  class="si-icon"
+                  alt="Git"
+                />
+              </div>
+              <span class="skill-name">Git</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.simpleicons.org/github/ffffff"
+                  class="si-icon"
+                  alt="GitHub"
+                />
+              </div>
+              <span class="skill-name">GitHub</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.simpleicons.org/redux/764ABC"
+                  class="si-icon"
+                  alt="State Management"
+                />
+              </div>
+              <span class="skill-name">State Management</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.simpleicons.org/lottiefiles/00DDB4"
+                  class="si-icon"
+                  alt="Animations"
+                />
+              </div>
+              <span class="skill-name">Animations</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img src="Rive_rive_square_1.png" class="si-icon" alt="Rive" />
+              </div>
+              <span class="skill-name">Rive</span>
+            </div>
+            <div class="skill-card reveal-fade-up">
+              <div class="skill-icon">
+                <img
+                  src="supabase-logo-icon.png"
+                  class="si-icon"
+                  alt="Supabase"
+                />
+              </div>
+              <span class="skill-name">Supabase</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ====================== ABOUT ====================== -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-header reveal-fade-up">
-        <span class="section-tag">About Me</span>
-        <h2 class="section-title">Architecting High Performance Apps</h2>
-        <p class="section-description">Combining engineering rigor with pixel-perfect design aesthetics.</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-card reveal-fade-left">
-          <p>I'm a mobile developer who builds Flutter and Jetpack Compose applications that are as performant under the
-            hood as they are delightful on screen. My work sits at the intersection of engineering and design: I obsess
-            over system architecture and clean, scalable code, but I never lose sight of the person who'll actually be
-            tapping through the app.</p>
-          <p>I believe great mobile experiences come from getting the small things right smooth animations, intuitive
-            flows, and interfaces that feel effortless backed by architecture that holds up as products grow. Beyond
-            shipping features, I'm constantly experimenting with new tools and patterns in the Flutter and Compose
-            ecosystems to keep my craft sharp.
-
-            What drives me isn't just solving technical problems it's building applications people genuinely enjoy
-            using.
+    <!-- ====================== FEATURED TECHNOLOGIES ====================== -->
+    <section class="section" id="tech">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">Ecosystem</span>
+          <h2 class="section-title">Featured Technologies</h2>
+          <p class="section-description">
+            Modern developer tools, SDKs and frameworks utilized daily.
           </p>
         </div>
 
-        <div class="about-stats-grid">
-          <div class="stat-box reveal-scale">
-            <div class="stat-number" data-target="4+">0+</div>
-            <div class="stat-label">Years Experience</div>
+        <div class="tech-grid reveal-fade-up">
+          <div class="tech-badge">
+            <img src="flutter.png" class="tech-badge-icon" alt="Flutter" />
+            <span>Flutter</span>
           </div>
-          <div class="stat-box reveal-scale">
-            <div class="stat-number" data-target="10+">0+</div>
-            <div class="stat-label">Projects Completed</div>
+          <div class="tech-badge">
+            <img
+              src="https://cdn.simpleicons.org/android/3DDC84"
+              class="tech-badge-icon"
+              alt="Android"
+            />
+            <span>Android</span>
           </div>
-          <div class="stat-box reveal-scale">
-            <div class="stat-number" style="-webkit-text-fill-color:var(--primary-glow);font-size:1.6rem;">Flutter
-              Development</div>
-            <div class="stat-label">Expert</div>
+          <div class="tech-badge">
+            <img
+              src="https://cdn.simpleicons.org/firebase/FFCA28"
+              class="tech-badge-icon"
+              alt="Firebase"
+            />
+            <span>Firebase</span>
           </div>
-          <div class="stat-box reveal-scale">
-            <div class="stat-number" style="-webkit-text-fill-color:var(--primary-glow);font-size:1.6rem;">Jetpack
-              Compose</div>
-            <div class="stat-label">Expert</div>
+          <div class="tech-badge">
+            <img src="dart.png" class="tech-badge-icon" alt="Dart" />
+            <span>Dart</span>
+          </div>
+          <div class="tech-badge">
+            <img
+              src="https://cdn.simpleicons.org/kotlin/7F52FF"
+              class="tech-badge-icon"
+              alt="Kotlin"
+            />
+            <span>Kotlin</span>
+          </div>
+          <div class="tech-badge">
+            <img
+              src="jetpack compose.png"
+              class="tech-badge-icon"
+              alt="Compose"
+            />
+            <span>Compose</span>
+          </div>
+          <div class="tech-badge">
+            <img
+              src="https://cdn.simpleicons.org/git/F05032"
+              class="tech-badge-icon"
+              alt="Git"
+            />
+            <span>Git</span>
+          </div>
+          <div class="tech-badge">
+            <img
+              src="https://cdn.simpleicons.org/github/ffffff"
+              class="tech-badge-icon"
+              alt="GitHub"
+            />
+            <span>GitHub</span>
+          </div>
+          <div class="tech-badge">
+            <img
+              src="https://cdn.simpleicons.org/docker/2496ED"
+              class="tech-badge-icon"
+              alt="Docker"
+            />
+            <span>Docker</span>
+          </div>
+          <div class="tech-badge">
+            <img src="figma.png" class="tech-badge-icon" alt="Figma" />
+            <span>Figma</span>
+          </div>
+
+          <div class="tech-badge">
+            <img
+              src="https://cdn.simpleicons.org/graphql/E10098"
+              class="tech-badge-icon"
+              alt="GraphQL"
+            />
+            <span>GraphQL</span>
+          </div>
+          <div class="tech-badge">
+            <img
+              src="https://cdn.simpleicons.org/postman/FF6C37"
+              class="tech-badge-icon"
+              alt="Postman"
+            />
+            <span>Postman</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ====================== SERVICES ====================== -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-header reveal-fade-up">
-        <span class="section-tag">Services</span>
-        <h2 class="section-title">What I Can Build For You</h2>
-        <p class="section-description">Building modern, scalable mobile applications from concept and design to
-          development, deployment, and ongoing support.</p>
-      </div>
-
-      <div class="services-grid">
-        <!-- Flutter Mobile Apps -->
-        <div class="service-card reveal-fade-up">
-          <div class="service-icon">
-            <img src="flutter.png" class="si-icon" alt="Flutter icon">
-          </div>
-          <h3 class="service-title">Flutter Mobile Apps</h3>
-          <p class="service-desc">Cross-platform iOS &amp; Android applications with 60fps performance and native feel.
+    <!-- ====================== PROJECTS ====================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">Portfolio Showcase</span>
+          <h2 class="section-title">Featured Mobile Applications</h2>
+          <p class="section-description">
+            High-impact Flutter, Android, fintech, e-learning, and booking apps
+            built for performance, scalability, and discoverability.
           </p>
         </div>
 
-        <!-- Jetpack Compose -->
-        <div class="service-card reveal-fade-up">
-          <div class="service-icon">
-            <img src="https://cdn.simpleicons.org/android/3DDC84" class="si-icon" alt="Android icon">
-          </div>
-          <h3 class="service-title">Android with Jetpack Compose</h3>
-          <p class="service-desc">Modern declarative native Android apps leveraging Kotlin &amp; modern architecture
-            components.</p>
-        </div>
-
-        <!-- Flutter Web -->
-        <div class="service-card reveal-fade-up">
-          <div class="service-icon">
-            <img src="flutter.png" class="si-icon" alt="Flutter Web icon">
-          </div>
-          <h3 class="service-title">Flutter Web Applications</h3>
-          <p class="service-desc">Fast responsive single-page web experiences sharing code directly with mobile apps.
-          </p>
-        </div>
-
-        <!-- Firebase -->
-        <div class="service-card reveal-fade-up">
-          <div class="service-icon">
-            <img src="https://cdn.simpleicons.org/firebase/FFCA28" class="si-icon" alt="Firebase icon">
-          </div>
-          <h3 class="service-title">Firebase Integration</h3>
-          <p class="service-desc">Realtime Database, Firestore, Authentication, Cloud Functions &amp; Push
-            Notifications.</p>
-        </div>
-
-        <!-- REST API -->
-        <div class="service-card reveal-fade-up">
-          <div class="service-icon">
-            <img src="https://cdn.simpleicons.org/fastapi/009688" class="si-icon" alt="API icon">
-          </div>
-          <h3 class="service-title">REST API Integration</h3>
-          <p class="service-desc">Robust network layer integration using Retrofit, Dio, HTTP clients &amp; caching
-            strategy.</p>
-        </div>
-
-        <!-- Kotlin for Android -->
-        <div class="service-card reveal-fade-up">
-          <div class="service-icon">
-            <img src="https://cdn.simpleicons.org/kotlin/7F52FF" class="si-icon" alt="Kotlin icon">
-          </div>
-          <h3 class="service-title">Kotlin for Android</h3>
-          <p class="service-desc">Building robust, idiomatic native Android apps with Kotlin — clean architecture,
-            coroutines &amp; modern Android APIs.</p>
-        </div>
-
-        <!-- Jetpack Compose -->
-        <div class="service-card reveal-fade-up">
-          <div class="service-icon">
-            <img src="jetpack compose.png" class="si-icon" alt="Jetpack Compose icon">
-          </div>
-          <h3 class="service-title">Jetpack Compose UI</h3>
-          <p class="service-desc">Crafting declarative, beautiful native Android UIs with Jetpack Compose, Material 3
-            &amp; smooth state-driven animations.</p>
-        </div>
-
-        <!-- Admin Dashboards -->
-        <div class="service-card reveal-fade-up">
-          <div class="service-icon">
-            <img src="admin_dashboard.png" class="si-icon" alt="Dashboard icon">
-          </div>
-          <h3 class="service-title">Admin Dashboards</h3>
-          <p class="service-desc">Interactive administrative control panels for data analytics and real-time monitoring.
-          </p>
-        </div>
-
-
-
-        <!-- App Store Deployment -->
-        <div class="service-card reveal-fade-up">
-          <div class="service-icon">
-            <img src="playstore.png" class="si-icon" alt="App Store icon">
-          </div>
-          <h3 class="service-title">App Store Deployment</h3>
-          <p class="service-desc">Publishing to Google Play Store &amp; Apple App Store with CI/CD pipelines.</p>
-        </div>
-
-        <!-- UI/UX -->
-        <div class="service-card reveal-fade-up">
-          <div class="service-icon">
-            <img src="figma.png" class="si-icon" alt="Figma icon">
-          </div>
-          <h3 class="service-title">UI/UX Implementation</h3>
-          <p class="service-desc">Translating Figma designs into pixel-perfect responsive code with fluid animations.
-          </p>
-        </div>
-
-        <!-- Performance -->
-        <div class="service-card reveal-fade-up">
-          <div class="service-icon">
-            <img src="performance.png" class="si-icon" alt="Performance icon">
-          </div>
-          <h3 class="service-title">Performance Optimization</h3>
-          <p class="service-desc">Eliminating lag, optimizing memory allocation, widget rebuilding and cold start times.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================== SKILLS ====================== -->
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="section-header reveal-fade-up">
-        <span class="section-tag">Skills &amp; Proficiency</span>
-        <h2 class="section-title">Technical Mastery</h2>
-        <p class="section-description">Core technologies and skill proficiency levels.</p>
-      </div>
-
-      <div class="skills-container">
-
-        <!-- SVG Gradient definition (used by rings) -->
-        <svg style="width:0;height:0;position:absolute;" aria-hidden="true">
-          <defs>
-            <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#008838" />
-              <stop offset="50%" stop-color="#00b74a" />
-              <stop offset="100%" stop-color="#3cff9c" />
-            </linearGradient>
-          </defs>
-        </svg>
-
-        <!-- Circular progress rings -->
-        <div class="progress-rings-grid">
-          <div class="progress-ring-card reveal-fade-up" data-percent="95">
-            <div class="ring-wrapper">
-              <svg class="ring-svg" viewBox="0 0 100 100">
-                <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
-                <circle class="ring-circle-val" cx="50" cy="50" r="45" />
-              </svg>
-              <span class="ring-text">95%</span>
+        <div class="projects-grid">
+          <div class="project-card reveal-fade-up">
+            <div class="project-img-wrapper">
+              <img src="4.png" alt="WhizToonz Mobile App" class="project-img" />
+              <div class="project-overlay"></div>
             </div>
-            <span class="ring-label">Flutter</span>
-          </div>
-          <div class="progress-ring-card reveal-fade-up" data-percent="90">
-            <div class="ring-wrapper">
-              <svg class="ring-svg" viewBox="0 0 100 100">
-                <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
-                <circle class="ring-circle-val" cx="50" cy="50" r="45" />
-              </svg>
-              <span class="ring-text">90%</span>
-            </div>
-            <span class="ring-label">Jetpack Compose</span>
-          </div>
-          <div class="progress-ring-card reveal-fade-up" data-percent="95">
-            <div class="ring-wrapper">
-              <svg class="ring-svg" viewBox="0 0 100 100">
-                <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
-                <circle class="ring-circle-val" cx="50" cy="50" r="45" />
-              </svg>
-              <span class="ring-text">95%</span>
-            </div>
-            <span class="ring-label">Dart</span>
-          </div>
-          <div class="progress-ring-card reveal-fade-up" data-percent="90">
-            <div class="ring-wrapper">
-              <svg class="ring-svg" viewBox="0 0 100 100">
-                <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
-                <circle class="ring-circle-val" cx="50" cy="50" r="45" />
-              </svg>
-              <span class="ring-text">90%</span>
-            </div>
-            <span class="ring-label">Kotlin</span>
-          </div>
-          <div class="progress-ring-card reveal-fade-up" data-percent="90">
-            <div class="ring-wrapper">
-              <svg class="ring-svg" viewBox="0 0 100 100">
-                <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
-                <circle class="ring-circle-val" cx="50" cy="50" r="45" />
-              </svg>
-              <span class="ring-text">90%</span>
-            </div>
-            <span class="ring-label">Firebase</span>
-          </div>
-          <div class="progress-ring-card reveal-fade-up" data-percent="85">
-            <div class="ring-wrapper">
-              <svg class="ring-svg" viewBox="0 0 100 100">
-                <circle class="ring-circle-bg" cx="50" cy="50" r="45" />
-                <circle class="ring-circle-val" cx="50" cy="50" r="45" />
-              </svg>
-              <span class="ring-text">85%</span>
-            </div>
-            <span class="ring-label">UI/UX Engineering</span>
-          </div>
-        </div>
-
-        <!-- Skill badge cards — all icons via Simple Icons CDN -->
-        <div class="skills-grid">
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="flutter.png" class="si-icon" alt="Flutter">
-            </div>
-            <span class="skill-name">Flutter</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="jetpack compose.png" class="si-icon" alt="Jetpack Compose"></div>
-            <span class="skill-name">Jetpack Compose</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="dart.png" class="si-icon" alt="Dart"></div>
-            <span class="skill-name">Dart</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="https://cdn.simpleicons.org/kotlin/7F52FF" class="si-icon" alt="Kotlin">
-            </div>
-            <span class="skill-name">Kotlin</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="https://cdn.simpleicons.org/firebase/FFCA28" class="si-icon"
-                alt="Firebase"></div>
-            <span class="skill-name">Firebase</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="https://cdn.simpleicons.org/fastapi/009688" class="si-icon"
-                alt="REST APIs"></div>
-            <span class="skill-name">REST APIs</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="https://cdn.simpleicons.org/graphql/E10098" class="si-icon" alt="GraphQL">
-            </div>
-            <span class="skill-name">GraphQL</span>
-          </div>
-
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="https://cdn.simpleicons.org/docker/2496ED" class="si-icon" alt="Docker">
-            </div>
-            <span class="skill-name">Docker</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="https://cdn.simpleicons.org/git/F05032" class="si-icon" alt="Git"></div>
-            <span class="skill-name">Git</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="https://cdn.simpleicons.org/github/ffffff" class="si-icon" alt="GitHub">
-            </div>
-            <span class="skill-name">GitHub</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="https://cdn.simpleicons.org/redux/764ABC" class="si-icon"
-                alt="State Management"></div>
-            <span class="skill-name">State Management</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="https://cdn.simpleicons.org/lottiefiles/00DDB4" class="si-icon"
-                alt="Animations"></div>
-            <span class="skill-name">Animations</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="Rive_rive_square_1.png" class="si-icon" alt="Rive"></div>
-            <span class="skill-name">Rive</span>
-          </div>
-          <div class="skill-card reveal-fade-up">
-            <div class="skill-icon"><img src="supabase-logo-icon.png" class="si-icon" alt="Supabase"></div>
-            <span class="skill-name">Supabase</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================== FEATURED TECHNOLOGIES ====================== -->
-  <section class="section" id="tech">
-    <div class="container">
-      <div class="section-header reveal-fade-up">
-        <span class="section-tag">Ecosystem</span>
-        <h2 class="section-title">Featured Technologies</h2>
-        <p class="section-description">Modern developer tools, SDKs and frameworks utilized daily.</p>
-      </div>
-
-      <div class="tech-grid reveal-fade-up">
-        <div class="tech-badge">
-          <img src="flutter.png" class="tech-badge-icon" alt="Flutter">
-          <span>Flutter</span>
-        </div>
-        <div class="tech-badge">
-          <img src="https://cdn.simpleicons.org/android/3DDC84" class="tech-badge-icon" alt="Android">
-          <span>Android</span>
-        </div>
-        <div class="tech-badge">
-          <img src="https://cdn.simpleicons.org/firebase/FFCA28" class="tech-badge-icon" alt="Firebase">
-          <span>Firebase</span>
-        </div>
-        <div class="tech-badge">
-          <img src="dart.png" class="tech-badge-icon" alt="Dart">
-          <span>Dart</span>
-        </div>
-        <div class="tech-badge">
-          <img src="https://cdn.simpleicons.org/kotlin/7F52FF" class="tech-badge-icon" alt="Kotlin">
-          <span>Kotlin</span>
-        </div>
-        <div class="tech-badge">
-          <img src="jetpack compose.png" class="tech-badge-icon" alt="Compose">
-          <span>Compose</span>
-        </div>
-        <div class="tech-badge">
-          <img src="https://cdn.simpleicons.org/git/F05032" class="tech-badge-icon" alt="Git">
-          <span>Git</span>
-        </div>
-        <div class="tech-badge">
-          <img src="https://cdn.simpleicons.org/github/ffffff" class="tech-badge-icon" alt="GitHub">
-          <span>GitHub</span>
-        </div>
-        <div class="tech-badge">
-          <img src="https://cdn.simpleicons.org/docker/2496ED" class="tech-badge-icon" alt="Docker">
-          <span>Docker</span>
-        </div>
-        <div class="tech-badge">
-          <img src="figma.png" class="tech-badge-icon" alt="Figma">
-          <span>Figma</span>
-        </div>
-
-        <div class="tech-badge">
-          <img src="https://cdn.simpleicons.org/graphql/E10098" class="tech-badge-icon" alt="GraphQL">
-          <span>GraphQL</span>
-        </div>
-        <div class="tech-badge">
-          <img src="https://cdn.simpleicons.org/postman/FF6C37" class="tech-badge-icon" alt="Postman">
-          <span>Postman</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================== PROJECTS ====================== -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-header reveal-fade-up">
-        <span class="section-tag">Portfolio Showcase</span>
-        <h2 class="section-title">Featured Mobile Applications</h2>
-        <p class="section-description">A curated selection of high-impact production mobile applications.</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <div class="project-card reveal-fade-up">
-          <div class="project-img-wrapper">
-            <img src="4.png" alt="WhizToonz Mobile App" class="project-img">
-            <div class="project-overlay"></div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">WhizToonz</h3>
-            <p class="project-desc">WhizToonz is An app that connects learners, gamers, and educators, offering a
-              seamless learning experience for kids and teenagers.</p>
-            <div class="project-chips">
-              <span class="chip">Flutter</span><span class="chip">REST API</span><span class="chip">Stripe</span><span
-                class="chip">Real Time Communication</span><span class="chip">Media Player</span>
-            </div>
-            <!-- <div class="project-actions">
+            <div class="project-body">
+              <h3 class="project-title">WhizToonz</h3>
+              <p class="project-desc">
+                WhizToonz is a Flutter-based edtech and learning app for kids
+                and teenagers, combining gamified education, real-time
+                communication, and a polished mobile experience.
+              </p>
+              <div class="project-chips">
+                <span class="chip">Flutter App</span
+                ><span class="chip">EdTech App</span
+                ><span class="chip">Kids Learning App</span
+                ><span class="chip">Mobile Learning Platform</span
+                ><span class="chip">Realtime Communication</span>
+              </div>
+              <!-- <div class="project-actions">
               <a href="#contact" class="btn btn-outline" style="padding:.5rem 1.2rem;font-size:.85rem;">Live Demo</a>
               <a href="https://github.com/abiodungbenga" target="_blank" rel="noopener" class="btn btn-secondary"
                 style="padding:.5rem 1.2rem;font-size:.85rem;">GitHub</a>
             </div> -->
-          </div>
-        </div>
-
-        <div class="project-card reveal-fade-up">
-          <div class="project-img-wrapper">
-            <img src="5.png" alt="MyPal App" class="project-img">
-            <div class="project-overlay"></div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">MyPal</h3>
-            <p class="project-desc">Mypal is an app that helps users discover real experiences on MyPal. Reserve, enjoy,
-              and
-              share Unforgettable moments.</p>
-            <div class="project-chips">
-              <span class="chip">Flutter</span><span class="chip">REST API</span><span
-                class="chip">E-commerce</span><span class="chip">Payment Gateway</span><span class="chip">Realtime
-                Chat</span>
             </div>
-            <!-- <div class="project-actions">
+          </div>
+
+          <div class="project-card reveal-fade-up">
+            <div class="project-img-wrapper">
+              <img src="5.png" alt="MyPal App" class="project-img" />
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">MyPal</h3>
+              <p class="project-desc">
+                MyPal is a Flutter booking and experience discovery app designed
+                for users to explore, reserve, and share memorable moments
+                through a modern mobile journey.
+              </p>
+              <div class="project-chips">
+                <span class="chip">Flutter App</span
+                ><span class="chip">Booking App</span
+                ><span class="chip">Experience Discovery App</span
+                ><span class="chip">Payment Gateway</span
+                ><span class="chip">Realtime Chat</span>
+              </div>
+              <!-- <div class="project-actions">
               <a href="#contact" class="btn btn-outline" style="padding:.5rem 1.2rem;font-size:.85rem;">Live Demo</a>
               <a href="https://github.com/abiodungbenga" target="_blank" rel="noopener" class="btn btn-secondary"
                 style="padding:.5rem 1.2rem;font-size:.85rem;">GitHub</a>
             </div> -->
+            </div>
           </div>
-        </div>
 
-        <!-- <div class="project-card reveal-fade-up">
+          <!-- <div class="project-card reveal-fade-up">
           <div class="project-img-wrapper">
             <img src="monumental-habit.png" alt="Monumental Habit App" class="project-img">
             <div class="project-overlay"></div>
@@ -722,221 +1031,440 @@
           </div>
         </div> -->
 
-        <div class="project-card reveal-fade-up">
-          <div class="project-img-wrapper">
-            <img src="3.png" alt="Savory Food App" class="project-img">
-            <div class="project-overlay"></div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">Savory</h3>
-            <p class="project-desc">Savory is a comprehensive recipe discovery app with thousands of delicious recipes.
-              Browse, search, and save your favorite meals with beautiful food photography and detailed cooking
-              instructions.</p>
-            <div class="project-chips">
-              <span class="chip">Jetpack Compose</span><span class="chip">Kotlin</span><span
-                class="chip">Supabase</span><span class="chip">REST
-                API</span>
+          <div class="project-card reveal-fade-up">
+            <div class="project-img-wrapper">
+              <img src="3.png" alt="Savory Food App" class="project-img" />
+              <div class="project-overlay"></div>
             </div>
-            <!-- <div class="project-actions">
+            <div class="project-body">
+              <h3 class="project-title">Savory</h3>
+              <p class="project-desc">
+                Savory is a modern recipe discovery app built for food lovers,
+                featuring content-rich browsing, search, and favorites with a
+                premium mobile UI and seamless API-driven experience.
+              </p>
+              <div class="project-chips">
+                <span class="chip">Android App</span
+                ><span class="chip">Jetpack Compose</span
+                ><span class="chip">Food Discovery App</span
+                ><span class="chip">Kotlin App</span
+                ><span class="chip">Supabase</span>
+              </div>
+              <!-- <div class="project-actions">
               <a href="#contact" class="btn btn-outline" style="padding:.5rem 1.2rem;font-size:.85rem;">Live Demo</a>
               <a href="https://github.com/abiodungbenga" target="_blank" rel="noopener" class="btn btn-secondary"
                 style="padding:.5rem 1.2rem;font-size:.85rem;">GitHub</a>
             </div> -->
-          </div>
-        </div>
-
-        <div class="project-card reveal-fade-up">
-          <div class="project-img-wrapper">
-            <img src="2.png" alt="Bankee Fintech App" class="project-img">
-            <div class="project-overlay"></div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">Bankee</h3>
-            <p class="project-desc">Bankee is a Modern banking app for wealth management with intuitive account
-              creation, real-time balance tracking, and smart budget categorization. Maximize your wealth with ease
-              through a beautiful interface.</p>
-            <div class="project-chips">
-              <span class="chip">Jetpack Compose</span><span class="chip">Kotlin</span><span class="chip">Modern Banking
-                App</span><span class="chip">Fintech App</span><span class="chip">Mobile Banking</span><span
-                class="chip">Firebase</span><span class="chip">REST
-                API</span>
             </div>
-            <!-- <div class="project-actions">
+          </div>
+
+          <div class="project-card reveal-fade-up">
+            <div class="project-img-wrapper">
+              <img src="2.png" alt="Bankee Fintech App" class="project-img" />
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Bankee</h3>
+              <p class="project-desc">
+                Bankee is a modern fintech and digital banking app for wealth
+                management, featuring account onboarding, real-time balance
+                tracking, budgeting tools, and a premium financial experience.
+              </p>
+              <div class="project-chips">
+                <span class="chip">Fintech App</span
+                ><span class="chip">Mobile Banking App</span
+                ><span class="chip">Jetpack Compose</span
+                ><span class="chip">Kotlin App</span
+                ><span class="chip">Digital Wallet App</span
+                ><span class="chip">Firebase</span>
+              </div>
+              <!-- <div class="project-actions">
               <a href="#contact" class="btn btn-outline" style="padding:.5rem 1.2rem;font-size:.85rem;">Live Demo</a>
               <a href="https://github.com/abiodungbenga" target="_blank" rel="noopener" class="btn btn-secondary"
                 style="padding:.5rem 1.2rem;font-size:.85rem;">GitHub</a>
             </div> -->
-          </div>
-        </div>
-
-        <div class="project-card reveal-fade-up">
-          <div class="project-img-wrapper">
-            <img src="6.png" alt="Keke Cruise GPS App" class="project-img">
-            <div class="project-overlay"></div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">Keke Cruise</h3>
-            <p class="project-desc">Keke Cruise is an Innovative bike rental platform that lets you reserve bikes
-              effortlessly, track their location in real time, and manage rentals with ease</p>
-            <div class="project-chips">
-              <span class="chip">Flutter</span><span class="chip">Booking System</span><span class="chip">Push
-                Notifications</span><span class="chip">Location Services</span><span class="chip">Mobility
-                Platform</span><span class="chip">REST API</span><span class="chip">Real-time GPS</span>
             </div>
-            <!-- <div class="project-actions">
+          </div>
+
+          <div class="project-card reveal-fade-up">
+            <div class="project-img-wrapper">
+              <img src="6.png" alt="Keke Cruise GPS App" class="project-img" />
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Keke Cruise</h3>
+              <p class="project-desc">
+                Keke Cruise is an innovative mobility and bike rental platform
+                that enables seamless booking, live GPS tracking, and real-time
+                rental management through a scalable mobile experience.
+              </p>
+              <div class="project-chips">
+                <span class="chip">Flutter App</span
+                ><span class="chip">Mobility App</span
+                ><span class="chip">Bike Rental App</span
+                ><span class="chip">Location Services</span
+                ><span class="chip">Booking Platform</span
+                ><span class="chip">Realtime GPS</span>
+              </div>
+              <!-- <div class="project-actions">
               <a href="#contact" class="btn btn-outline" style="padding:.5rem 1.2rem;font-size:.85rem;">Live Demo</a>
               <a href="https://github.com/abiodungbenga" target="_blank" rel="noopener" class="btn btn-secondary"
                 style="padding:.5rem 1.2rem;font-size:.85rem;">GitHub</a>
             </div> -->
+            </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-
-
-  <!-- ====================== CONTACT ====================== -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="section-header reveal-fade-up">
-        <span class="section-tag">Get In Touch</span>
-        <h2 class="section-title">Let's Build Something Great Together</h2>
-        <p class="section-description">Have a project in mind or want to discuss a role? Drop a message!</p>
-      </div>
-
-      <div class="contact-grid">
-        <!-- Info cards -->
-        <div class="contact-info-list reveal-fade-left">
-          <a href="mailto:gbengaemma22@gmail.com" class="contact-info-card">
-            <div class="contact-info-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-              </svg>
-            </div>
-            <div>
-              <div class="contact-info-label">Direct Email</div>
-              <div class="contact-info-value">gbengaemma22@gmail.com</div>
-            </div>
-          </a>
-
-          <a href="https://github.com/abiodungbenga" target="_blank" rel="noopener" class="contact-info-card">
-            <div class="contact-info-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-              </svg>
-            </div>
-            <div>
-              <div class="contact-info-label">GitHub</div>
-              <div class="contact-info-value">github.com/abiodungbenga</div>
-            </div>
-          </a>
-
-          <a href="https://www.linkedin.com/in/abiodemma" target="_blank" rel="noopener" class="contact-info-card">
-            <div class="contact-info-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-            </div>
-            <div>
-              <div class="contact-info-label">LinkedIn</div>
-              <div class="contact-info-value">linkedin.com/in/abiodemma</div>
-            </div>
-          </a>
-
-          <a href="https://x.com/AGE170" target="_blank" rel="noopener" class="contact-info-card">
-            <div class="contact-info-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            </div>
-            <div>
-              <div class="contact-info-label">Twitter / X</div>
-              <div class="contact-info-value">x.com/AGE170</div>
-            </div>
-          </a>
-
-          <a href="https://wa.me/2349138186491" target="_blank" rel="noopener" class="contact-info-card">
-            <div class="contact-info-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-              </svg>
-            </div>
-            <div>
-              <div class="contact-info-label">WhatsApp</div>
-              <div class="contact-info-value">+234 913 818 6491</div>
-            </div>
-          </a>
+    <!-- ====================== EXPERIENCE & CERTIFICATIONS ====================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">Experience & Credentials</span>
+          <h2 class="section-title">A Career Built on Product Delivery</h2>
+          <p class="section-description">
+            A premium timeline of my professional journey, product impact, and
+            industry-recognized training.
+          </p>
         </div>
 
-        <!-- Contact form -->
-        <form id="contact-form" class="contact-form reveal-fade-right" action="https://formspree.io/f/xvzyeykb"
-          method="POST">
-          <div class="form-group">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required />
+        <div class="experience-layout">
+          <div class="experience-card reveal-fade-left">
+            <div class="experience-card-header">
+              <span class="section-tag">Work History</span>
+              <h3 class="experience-card-title">Professional Journey</h3>
+            </div>
+
+            <div class="experience-list">
+              <div class="experience-item">
+                <div class="experience-time">Mar 2026 — Present</div>
+                <h4 class="experience-role">Mobile Engineer · Clinivent</h4>
+                <p class="experience-desc">
+                  I’m currently building mobile products that need to feel
+                  smooth, reliable, and thoughtfully designed. At Clinivent, I
+                  work on real user-facing features, fix issues that affect
+                  daily use, and keep the experience polished as the product
+                  grows.
+                </p>
+              </div>
+
+              <div class="experience-item">
+                <div class="experience-time">May 2025 — Feb 2026</div>
+                <h4 class="experience-role">
+                  Flutter Developer · Oaks Intelligence Limited
+                </h4>
+                <p class="experience-desc">
+                  At Oaks Intelligence, I led the development of WhizToonz from
+                  the early build stages through launch. It was one of those
+                  projects where the product had to feel simple to the user
+                  while still being solid under the hood, and that balance
+                  mattered a lot to me.
+                </p>
+              </div>
+
+              <div class="experience-item">
+                <div class="experience-time">Feb 2025 — Apr 2025</div>
+                <h4 class="experience-role">
+                  Software Engineer (Flutter) · Kekecruise
+                </h4>
+                <p class="experience-desc">
+                  With Kekecruise, I worked on a product where the experience
+                  had to feel effortless for users making bookings or tracking
+                  services. I focused on making the flow feel dependable and the
+                  app behave like it was built with care.
+                </p>
+              </div>
+
+              <div class="experience-item">
+                <div class="experience-time">Mar 2020 — Oct 2025</div>
+                <h4 class="experience-role">
+                  Flutter Developer · Innoventa Ltd
+                </h4>
+                <p class="experience-desc">
+                  At Innoventa, I spent a long stretch building and refining
+                  mobile solutions in a way that felt practical and
+                  product-first. I learned to balance clean engineering with the
+                  kind of UI and interaction details that users actually notice.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required />
+          <div class="certification-card reveal-fade-right">
+            <div class="experience-card-header">
+              <span class="section-tag">Certifications</span>
+              <h3 class="experience-card-title">Recognized Growth</h3>
+            </div>
+
+            <div class="certification-list">
+              <a
+                href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjIwIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvMTA0NTMxMTZfMTA3NzUzNjJfMTc4MzY5OTM1MTkyNi5wbmciLCJ1c2VybmFtZSI6IkdiZW5nYSBBYmlvZHVuIn0%3D&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6003%2FAndroid-App-Development-for-Beginners%2Fcertificate%2Fdownload-skillup&%24web_only=true"
+                target="_blank"
+                rel="noopener"
+                class="certification-item"
+              >
+                <span class="cert-badge">SkillUp</span>
+                <h4 class="cert-title">
+                  Android App Development for Beginners
+                </h4>
+                <p class="cert-meta">
+                  Simplilearn · Mobile Development Foundation
+                </p>
+              </a>
+
+              <a
+                href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIyMjk3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvMTA0NTI3ODZfMTA3NzUzNjJfMTc4MzY5NjU0MzMyNi5wbmciLCJ1c2VybmFtZSI6IkdiZW5nYSBBYmlvZHVuIn0%3D&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F4951%2FIntroduction-to-Flutter-Course-Online%2Fcertificate%2Fdownload-skillup&%24web_only=true"
+                target="_blank"
+                rel="noopener"
+                class="certification-item"
+              >
+                <span class="cert-badge">SkillUp</span>
+                <h4 class="cert-title">Introduction to Flutter Course</h4>
+                <p class="cert-meta">
+                  Simplilearn · Cross-platform App Development
+                </p>
+              </a>
+            </div>
           </div>
-
-          <div class="form-group">
-            <label for="message" class="form-label">Your Message</label>
-            <textarea id="message" name="message" class="form-control" rows="6"
-              placeholder="Tell me about your project..." required></textarea>
-          </div>
-
-          <!-- Spam Protection -->
-          <input type="text" name="_gotcha" style="display:none">
-
-          <!-- Email Subject -->
-          <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
-
-          <button type="submit" class="btn btn-primary" id="submit-btn" style="width:100%;">
-            <span>Send Message</span>
-
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-            </svg>
-          </button>
-
-          <p id="form-status"></p>
-        </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ====================== FOOTER ====================== -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <ul class="footer-nav">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="footer-copy">© 2026 Gbenga Abiodun. All rights reserved.</div>
-    </div>
-  </footer>
+    <!-- ====================== CONTACT ====================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Build Something Great Together</h2>
+          <p class="section-description">
+            Have a project in mind or want to discuss a role? Drop a message!
+          </p>
+        </div>
 
-  <!-- Scroll To Top -->
-  <button id="scroll-to-top" aria-label="Scroll to top">
-    <svg viewBox="0 0 24 24">
-      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
-    </svg>
-  </button>
+        <div class="contact-grid">
+          <!-- Info cards -->
+          <div class="contact-info-list reveal-fade-left">
+            <a href="mailto:gbengaemma22@gmail.com" class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Direct Email</div>
+                <div class="contact-info-value">gbengaemma22@gmail.com</div>
+              </div>
+            </a>
 
-  <script src="script.js"></script>
-</body>
+            <a
+              href="https://github.com/abiodungbenga"
+              target="_blank"
+              rel="noopener"
+              class="contact-info-card"
+            >
+              <div class="contact-info-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-info-label">GitHub</div>
+                <div class="contact-info-value">github.com/abiodungbenga</div>
+              </div>
+            </a>
 
+            <a
+              href="https://www.linkedin.com/in/abiodemma"
+              target="_blank"
+              rel="noopener"
+              class="contact-info-card"
+            >
+              <div class="contact-info-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-info-label">LinkedIn</div>
+                <div class="contact-info-value">linkedin.com/in/abiodemma</div>
+              </div>
+            </a>
+
+            <a
+              href="https://x.com/AGE170"
+              target="_blank"
+              rel="noopener"
+              class="contact-info-card"
+            >
+              <div class="contact-info-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Twitter / X</div>
+                <div class="contact-info-value">x.com/AGE170</div>
+              </div>
+            </a>
+
+            <a
+              href="https://wa.me/2349138186491"
+              target="_blank"
+              rel="noopener"
+              class="contact-info-card"
+            >
+              <div class="contact-info-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-info-label">WhatsApp</div>
+                <div class="contact-info-value">+234 913 818 6491</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Contact form -->
+          <form
+            id="contact-form"
+            class="contact-form reveal-fade-right"
+            action="https://formspree.io/f/xvzyeykb"
+            method="POST"
+          >
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="john@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                rows="6"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+            </div>
+
+            <!-- Spam Protection -->
+            <input type="text" name="_gotcha" style="display: none" />
+
+            <!-- Email Subject -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Portfolio Contact Form Submission"
+            />
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="submit-btn"
+              style="width: 100%"
+            >
+              <span>Send Message</span>
+
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+              </svg>
+            </button>
+
+            <p id="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FOOTER ====================== -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <ul class="footer-nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="footer-copy">
+          © 2026 Gbenga Abiodun. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll To Top -->
+    <button id="scroll-to-top" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24">
+        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+      </svg>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
 </html>

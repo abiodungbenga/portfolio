@@ -206,9 +206,13 @@ function initTypingEffect() {
 
   const roles = [
     "Flutter Developer",
-    "Android Developer",
-    "Ios Developer",
-    "Mobile UI/UX Specialist",
+    "Mobile Software Engineer",
+    "Android Engineer",
+    "Cross-Platform Expert",
+    "Mobile App Architect",
+    "UI/UX Enthusiast",
+    "Firebase Specialist",
+    "Problem Solver",
   ];
 
   let roleIndex = 0;
