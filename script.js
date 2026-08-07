@@ -4,7 +4,7 @@
  * Vanilla JavaScript ES6+ (No external libraries required)
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Initialize all interactive modules
   initPreloader();
   initThemeManager();
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
    1. PRELOADER
    ========================================================================== */
 function initPreloader() {
-  const preloader = document.getElementById('preloader');
-  const barFill = document.querySelector('.preloader-bar-fill');
+  const preloader = document.getElementById("preloader");
+  const barFill = document.querySelector(".preloader-bar-fill");
   if (!preloader || !barFill) return;
 
   let progress = 0;
@@ -33,10 +33,10 @@ function initPreloader() {
     progress += Math.floor(Math.random() * 25) + 10;
     if (progress >= 100) {
       progress = 100;
-      barFill.style.width = '100%';
+      barFill.style.width = "100%";
       clearInterval(interval);
       setTimeout(() => {
-        preloader.classList.add('loaded');
+        preloader.classList.add("loaded");
       }, 300);
     } else {
       barFill.style.width = `${progress}%`;
@@ -66,7 +66,8 @@ form.addEventListener("submit", async (e) => {
     });
 
     if (response.ok) {
-      status.textContent = "✅ Thank you! Your message has been sent successfully.";
+      status.textContent =
+        "✅ Thank you! Your message has been sent successfully.";
       status.style.color = "#008838";
       form.reset();
     } else {
@@ -86,29 +87,29 @@ form.addEventListener("submit", async (e) => {
    2. DARK / LIGHT THEME MANAGER
    ========================================================================== */
 function initThemeManager() {
-  const toggleBtn = document.getElementById('theme-toggle-btn');
-  const themeIcon = document.getElementById('theme-icon');
+  const toggleBtn = document.getElementById("theme-toggle-btn");
+  const themeIcon = document.getElementById("theme-icon");
   const htmlEl = document.documentElement;
 
   const sunSvg = `<svg viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>`;
   const moonSvg = `<svg viewBox="0 0 24 24"><path d="M12.3 2c.43 0 .77.35.75.78-.34 6.27 4.67 11.28 10.94 10.94.43-.02.78.32.78.75 0 5.48-4.44 9.92-9.92 9.92C8.38 24.39 3.5 19.51 3.5 13.02 3.5 7.54 7.94 3.1 13.42 3.1c-.37-.36-.72-.73-1.12-1.1z"/></svg>`;
 
-  const savedTheme = localStorage.getItem('gbenga_portfolio_theme') || 'dark';
+  const savedTheme = localStorage.getItem("gbenga_portfolio_theme") || "dark";
   setTheme(savedTheme);
 
   if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      const currentTheme = htmlEl.getAttribute('data-theme') || 'dark';
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    toggleBtn.addEventListener("click", () => {
+      const currentTheme = htmlEl.getAttribute("data-theme") || "dark";
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
       setTheme(newTheme);
     });
   }
 
   function setTheme(theme) {
-    htmlEl.setAttribute('data-theme', theme);
-    localStorage.setItem('gbenga_portfolio_theme', theme);
+    htmlEl.setAttribute("data-theme", theme);
+    localStorage.setItem("gbenga_portfolio_theme", theme);
     if (themeIcon) {
-      themeIcon.innerHTML = theme === 'dark' ? sunSvg : moonSvg;
+      themeIcon.innerHTML = theme === "dark" ? sunSvg : moonSvg;
     }
   }
 }
@@ -117,9 +118,9 @@ function initThemeManager() {
    3. HERO CANVAS PARTICLE SYSTEM
    ========================================================================== */
 function initParticleBackground() {
-  const canvas = document.getElementById('hero-canvas');
+  const canvas = document.getElementById("hero-canvas");
   if (!canvas) return;
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
 
   let width = (canvas.width = canvas.parentElement.offsetWidth);
   let height = (canvas.height = canvas.parentElement.offsetHeight);
@@ -147,9 +148,9 @@ function initParticleBackground() {
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = '#008838';
+      ctx.fillStyle = "#008838";
       ctx.shadowBlur = 10;
-      ctx.shadowColor = '#3cff9c';
+      ctx.shadowColor = "#3cff9c";
       ctx.fill();
     }
   }
@@ -190,7 +191,7 @@ function initParticleBackground() {
 
   animate();
 
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     width = canvas.width = canvas.parentElement.offsetWidth;
     height = canvas.height = canvas.parentElement.offsetHeight;
   });
@@ -200,13 +201,14 @@ function initParticleBackground() {
    4. HERO TYPING ANIMATION (UPDATED ROLES)
    ========================================================================== */
 function initTypingEffect() {
-  const typingTarget = document.getElementById('typing-target');
+  const typingTarget = document.getElementById("typing-target");
   if (!typingTarget) return;
 
   const roles = [
-    'Flutter Developer',
-    'Android Developer',
-    'Mobile UI/UX Specialist'
+    "Flutter Developer",
+    "Android Developer",
+    "Ios Developer",
+    "Mobile UI/UX Specialist",
   ];
 
   let roleIndex = 0;
@@ -249,25 +251,25 @@ function initTypingEffect() {
    ========================================================================== */
 function initScrollObserver() {
   const revealElements = document.querySelectorAll(
-    '.reveal-fade-up, .reveal-fade-left, .reveal-fade-right, .reveal-scale'
+    ".reveal-fade-up, .reveal-fade-left, .reveal-fade-right, .reveal-scale",
   );
 
   const observerOptions = {
     root: null,
-    rootMargin: '0px',
-    threshold: 0.15
+    rootMargin: "0px",
+    threshold: 0.15,
   };
 
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('reveal-active');
+        entry.target.classList.add("reveal-active");
 
-        if (entry.target.classList.contains('stat-box')) {
+        if (entry.target.classList.contains("stat-box")) {
           animateCounter(entry.target);
         }
 
-        if (entry.target.classList.contains('progress-ring-card')) {
+        if (entry.target.classList.contains("progress-ring-card")) {
           animateProgressRing(entry.target);
         }
 
@@ -278,38 +280,38 @@ function initScrollObserver() {
 
   revealElements.forEach((el) => revealObserver.observe(el));
 
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-  window.addEventListener('scroll', () => {
-    let current = '';
+  window.addEventListener("scroll", () => {
+    let current = "";
     const scrollPos = window.scrollY + 200;
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
       if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-        current = section.getAttribute('id');
+        current = section.getAttribute("id");
       }
     });
 
     navLinks.forEach((link) => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
       }
     });
   });
 }
 
 function animateCounter(statBox) {
-  const numEl = statBox.querySelector('.stat-number');
+  const numEl = statBox.querySelector(".stat-number");
   // Only animate boxes that have an explicit data-target (skip text-only badges)
-  if (!numEl || !numEl.hasAttribute('data-target')) return;
+  if (!numEl || !numEl.hasAttribute("data-target")) return;
 
-  const targetStr = numEl.getAttribute('data-target');
-  const targetNum = parseInt(targetStr.replace(/\D/g, ''), 10);
-  const suffix = targetStr.replace(/[0-9]/g, '');
+  const targetStr = numEl.getAttribute("data-target");
+  const targetNum = parseInt(targetStr.replace(/\D/g, ""), 10);
+  const suffix = targetStr.replace(/[0-9]/g, "");
 
   if (!targetNum) return;
 
@@ -317,21 +319,27 @@ function animateCounter(statBox) {
   const duration = 1500;
   const stepTime = Math.abs(Math.floor(duration / targetNum));
 
-  const timer = setInterval(() => {
-    current += 1;
-    numEl.textContent = `${current}${suffix}`;
-    if (current >= targetNum) {
-      numEl.textContent = targetStr;
-      clearInterval(timer);
-    }
-  }, Math.max(stepTime, 30));
+  const timer = setInterval(
+    () => {
+      current += 1;
+      numEl.textContent = `${current}${suffix}`;
+      if (current >= targetNum) {
+        numEl.textContent = targetStr;
+        clearInterval(timer);
+      }
+    },
+    Math.max(stepTime, 30),
+  );
 }
 
 function animateProgressRing(ringCard) {
-  const valCircle = ringCard.querySelector('.ring-circle-val');
+  const valCircle = ringCard.querySelector(".ring-circle-val");
   if (!valCircle) return;
 
-  const targetPercent = parseInt(ringCard.getAttribute('data-percent') || '0', 10);
+  const targetPercent = parseInt(
+    ringCard.getAttribute("data-percent") || "0",
+    10,
+  );
   const circumference = 283;
   const offset = circumference - (targetPercent / 100) * circumference;
 
@@ -342,10 +350,10 @@ function animateProgressRing(ringCard) {
    6. 3D MOUSE TILT EFFECT FOR PROJECT CARDS
    ========================================================================== */
 function initTiltEffect() {
-  const tiltCards = document.querySelectorAll('.project-card, .service-card');
+  const tiltCards = document.querySelectorAll(".project-card, .service-card");
 
   tiltCards.forEach((card) => {
-    card.addEventListener('mousemove', (e) => {
+    card.addEventListener("mousemove", (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
@@ -359,7 +367,7 @@ function initTiltEffect() {
       card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
     });
 
-    card.addEventListener('mouseleave', () => {
+    card.addEventListener("mouseleave", () => {
       card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
     });
   });
@@ -369,10 +377,10 @@ function initTiltEffect() {
    7. MOUSE SPOTLIGHT FOLLOW
    ========================================================================== */
 function initSpotlightEffect() {
-  const spotlight = document.getElementById('mouse-spotlight');
+  const spotlight = document.getElementById("mouse-spotlight");
   if (!spotlight) return;
 
-  window.addEventListener('mousemove', (e) => {
+  window.addEventListener("mousemove", (e) => {
     spotlight.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
   });
 }
@@ -381,24 +389,24 @@ function initSpotlightEffect() {
    8. RIPPLE EFFECT FOR BUTTONS
    ========================================================================== */
 function initRippleEffect() {
-  const buttons = document.querySelectorAll('.btn');
+  const buttons = document.querySelectorAll(".btn");
 
   buttons.forEach((btn) => {
-    btn.addEventListener('click', function (e) {
+    btn.addEventListener("click", function (e) {
       const x = e.clientX - e.target.getBoundingClientRect().left;
       const y = e.clientY - e.target.getBoundingClientRect().top;
 
-      const ripple = document.createElement('span');
-      ripple.style.position = 'absolute';
-      ripple.style.width = '100px';
-      ripple.style.height = '100px';
-      ripple.style.background = 'rgba(255, 255, 255, 0.4)';
-      ripple.style.borderRadius = '50%';
-      ripple.style.transform = 'translate(-50%, -50%) scale(0)';
-      ripple.style.animation = 'ripple 0.6s linear';
+      const ripple = document.createElement("span");
+      ripple.style.position = "absolute";
+      ripple.style.width = "100px";
+      ripple.style.height = "100px";
+      ripple.style.background = "rgba(255, 255, 255, 0.4)";
+      ripple.style.borderRadius = "50%";
+      ripple.style.transform = "translate(-50%, -50%) scale(0)";
+      ripple.style.animation = "ripple 0.6s linear";
       ripple.style.left = `${x}px`;
       ripple.style.top = `${y}px`;
-      ripple.style.pointerEvents = 'none';
+      ripple.style.pointerEvents = "none";
 
       this.appendChild(ripple);
 
@@ -413,17 +421,17 @@ function initRippleEffect() {
    9. MOBILE NAVIGATION DRAWER
    ========================================================================== */
 function initMobileNav() {
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const navLinks = document.getElementById('nav-links');
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const navLinks = document.getElementById("nav-links");
   if (!menuBtn || !navLinks) return;
 
-  menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
   });
 
-  navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
     });
   });
 }
@@ -432,12 +440,13 @@ function initMobileNav() {
    10. SCROLL PROGRESS BAR & NAVBAR SCROLLED STATE
    ========================================================================== */
 function initScrollProgress() {
-  const progressBar = document.getElementById('scroll-progress');
-  const navbar = document.getElementById('navbar');
+  const progressBar = document.getElementById("scroll-progress");
+  const navbar = document.getElementById("navbar");
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
     const progress = (scrollTop / docHeight) * 100;
 
     if (progressBar) {
@@ -446,9 +455,9 @@ function initScrollProgress() {
 
     if (navbar) {
       if (scrollTop > 50) {
-        navbar.classList.add('scrolled');
+        navbar.classList.add("scrolled");
       } else {
-        navbar.classList.remove('scrolled');
+        navbar.classList.remove("scrolled");
       }
     }
   });
@@ -458,19 +467,19 @@ function initScrollProgress() {
    11. SCROLL TO TOP
    ========================================================================== */
 function initScrollToTop() {
-  const btn = document.getElementById('scroll-to-top');
+  const btn = document.getElementById("scroll-to-top");
   if (!btn) return;
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     if (window.scrollY > 400) {
-      btn.classList.add('show');
+      btn.classList.add("show");
     } else {
-      btn.classList.remove('show');
+      btn.classList.remove("show");
     }
   });
 
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
@@ -478,36 +487,36 @@ function initScrollToTop() {
    12. CONTACT FORM VALIDATION & SUBMISSION
    ========================================================================== */
 function initContactForm() {
-  const form = document.getElementById('contact-form');
+  const form = document.getElementById("contact-form");
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const name = form.querySelector('#name').value.trim();
-    const email = form.querySelector('#email').value.trim();
-    const message = form.querySelector('#message').value.trim();
+    const name = form.querySelector("#name").value.trim();
+    const email = form.querySelector("#email").value.trim();
+    const message = form.querySelector("#message").value.trim();
 
     if (!name || !email || !message) {
-      alert('Please complete all form fields.');
+      alert("Please complete all form fields.");
       return;
     }
 
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
 
-    submitBtn.innerHTML = 'Sending...';
+    submitBtn.innerHTML = "Sending...";
     submitBtn.disabled = true;
 
     setTimeout(() => {
-      submitBtn.innerHTML = '✓ Message Sent!';
-      submitBtn.style.background = '#00b74a';
+      submitBtn.innerHTML = "✓ Message Sent!";
+      submitBtn.style.background = "#00b74a";
       form.reset();
 
       setTimeout(() => {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-        submitBtn.style.background = '';
+        submitBtn.style.background = "";
       }, 3000);
     }, 1200);
   });
