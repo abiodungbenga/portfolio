@@ -1704,6 +1704,17 @@ textarea.form-control {
     grid-template-columns: 1fr;
     gap: 2.2rem;
   }
+
+  /* Stack experience and certifications for better mobile readability */
+  .experience-layout {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .experience-card,
+  .certification-card {
+    padding: 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1887,5 +1898,59 @@ textarea.form-control {
   .about-stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
+  }
+}
+
+/* Additional targeted mobile tweaks to improve layout spacing and nav UX */
+@media (max-width: 900px) {
+  .nav-links {
+    width: calc(100% - 1rem);
+    max-width: 360px;
+    padding: 0.6rem;
+    background: var(--bg-nav);
+  }
+
+  .nav-links li {
+    padding: 0.45rem 0.6rem;
+  }
+
+  .hero-tagline {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profile-card-glow {
+    width: 220px;
+    height: 260px;
+  }
+
+  .hero-content {
+    gap: 1.2rem;
+  }
+
+  .hero-text-side {
+    padding: 0 0.25rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-links {
+    width: calc(100% - 0.5rem);
+    border-radius: 10px;
+  }
+
+  .hero-buttons .btn {
+    padding: 0.55rem 0.95rem;
+    font-size: 0.9rem;
+  }
+
+  .profile-card-glow {
+    width: 190px;
+    height: 220px;
+  }
+
+  .hero-title {
+    line-height: 1.05;
   }
 }
