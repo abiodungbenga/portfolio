@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSpotlightEffect();
   initRippleEffect();
   initMobileNav();
+  initIssuerLogos();
   initScrollProgress();
   initScrollToTop();
   initContactForm();
@@ -44,45 +45,6 @@ function initPreloader() {
   }, 60);
 }
 
-/// Form Manager
-const form = document.getElementById("contact-form");
-const submitBtn = document.getElementById("submit-btn");
-const status = document.getElementById("form-status");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  submitBtn.disabled = true;
-  submitBtn.querySelector("span").textContent = "Sending...";
-  status.textContent = "";
-
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (response.ok) {
-      status.textContent =
-        "✅ Thank you! Your message has been sent successfully.";
-      status.style.color = "#008838";
-      form.reset();
-    } else {
-      status.textContent = "❌ Failed to send your message. Please try again.";
-      status.style.color = "#ff4d4f";
-    }
-  } catch (error) {
-    status.textContent = "⚠️ Network error. Please check your connection.";
-    status.style.color = "#ff4d4f";
-  }
-
-  submitBtn.disabled = false;
-  submitBtn.querySelector("span").textContent = "Send Message";
-});
-
 /* ==========================================================================
    2. DARK / LIGHT THEME MANAGER
    ========================================================================== */
@@ -108,6 +70,13 @@ function initThemeManager() {
   function setTheme(theme) {
     htmlEl.setAttribute("data-theme", theme);
     localStorage.setItem("gbenga_portfolio_theme", theme);
+    if (toggleBtn) {
+      toggleBtn.setAttribute("aria-pressed", String(theme === "light"));
+      toggleBtn.setAttribute(
+        "aria-label",
+        `Switch to ${theme === "dark" ? "light" : "dark"} mode`,
+      );
+    }
     if (themeIcon) {
       themeIcon.innerHTML = theme === "dark" ? sunSvg : moonSvg;
     }
@@ -148,9 +117,9 @@ function initParticleBackground() {
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = "#008838";
+      ctx.fillStyle = "#00c853";
       ctx.shadowBlur = 10;
-      ctx.shadowColor = "#3cff9c";
+      ctx.shadowColor = "#00c853";
       ctx.fill();
     }
   }
@@ -428,15 +397,54 @@ function initMobileNav() {
   const menuBtn = document.getElementById("mobile-menu-btn");
   const navLinks = document.getElementById("nav-links");
   if (!menuBtn || !navLinks) return;
+  const mobileQuery = window.matchMedia("(max-width: 768px)");
+
+  const setMenuOpen = (isOpen) => {
+    navLinks.classList.toggle("active", isOpen);
+    navLinks.setAttribute(
+      "aria-hidden",
+      String(!isOpen && mobileQuery.matches),
+    );
+    navLinks.inert = !isOpen && mobileQuery.matches;
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    menuBtn.setAttribute(
+      "aria-label",
+      isOpen ? "Close Navigation Menu" : "Open Navigation Menu",
+    );
+  };
+
+  setMenuOpen(false);
+  mobileQuery.addEventListener("change", () => setMenuOpen(false));
 
   menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+    setMenuOpen(menuBtn.getAttribute("aria-expanded") !== "true");
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      menuBtn.getAttribute("aria-expanded") === "true"
+    ) {
+      setMenuOpen(false);
+      menuBtn.focus();
+    }
   });
 
   navLinks.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
+      setMenuOpen(false);
     });
+  });
+}
+
+function initIssuerLogos() {
+  document.querySelectorAll(".issuer-logo").forEach((logo) => {
+    const showFallback = () => {
+      logo.hidden = true;
+    };
+
+    logo.addEventListener("error", showFallback, { once: true });
+    if (logo.complete && logo.naturalWidth === 0) showFallback();
   });
 }
 
@@ -494,34 +502,38 @@ function initContactForm() {
   const form = document.getElementById("contact-form");
   if (!form) return;
 
-  form.addEventListener("submit", (e) => {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const submitLabel = submitBtn?.querySelector("span");
+  const status = document.getElementById("form-status");
+  if (!submitBtn || !submitLabel || !status) return;
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    const name = form.querySelector("#name").value.trim();
-    const email = form.querySelector("#email").value.trim();
-    const message = form.querySelector("#message").value.trim();
-
-    if (!name || !email || !message) {
-      alert("Please complete all form fields.");
-      return;
-    }
-
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-
-    submitBtn.innerHTML = "Sending...";
     submitBtn.disabled = true;
+    submitLabel.textContent = "Sending...";
+    status.textContent = "";
+    status.removeAttribute("data-state");
 
-    setTimeout(() => {
-      submitBtn.innerHTML = "✓ Message Sent!";
-      submitBtn.style.background = "#00b74a";
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) throw new Error("The message could not be sent.");
+
+      status.textContent =
+        "Thanks for reaching out. Your message is on its way.";
+      status.dataset.state = "success";
       form.reset();
-
-      setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-        submitBtn.style.background = "";
-      }, 3000);
-    }, 1200);
+    } catch {
+      status.textContent =
+        "Your message could not be sent. Please try again or email me directly.";
+      status.dataset.state = "error";
+    } finally {
+      submitBtn.disabled = false;
+      submitLabel.textContent = "Send Message";
+    }
   });
 }
