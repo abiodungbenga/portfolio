@@ -1,0 +1,236 @@
+media:
+  input: media
+  output: /media
+content:
+  - name: portfolio
+    label: Portfolio Content
+    type: file
+    path: portfolio-content.json
+    fields:
+      - name: hero
+        label: Profile and Introduction
+        type: object
+        fields:
+          - name: availability
+            label: Availability status
+            type: string
+          - name: name
+            label: Display name
+            type: string
+          - name: tagline
+            label: Introductory text
+            type: text
+          - name: profileImage
+            label: Profile image path
+            type: image
+            options:
+              categories: [image]
+          - name: roles
+            label: Role titles
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "Role {index}"
+            fields:
+              - name: title
+                label: Role
+                type: string
+      - name: about
+        label: About section
+        type: object
+        fields:
+          - name: title
+            label: Heading
+            type: string
+          - name: description
+            label: Short description
+            type: text
+          - name: paragraphs
+            label: Biography paragraphs
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "Paragraph {index}"
+            fields:
+              - name: text
+                label: Paragraph
+                type: text
+      - name: services
+        label: Services
+        type: object
+        fields:
+          - name: title
+            label: Section heading
+            type: string
+          - name: description
+            label: Section description
+            type: text
+          - name: items
+            label: Service items
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: icon
+                label: Icon path or URL
+                type: string
+              - name: iconAlt
+                label: Icon description
+                type: string
+              - name: title
+                label: Service name
+                type: string
+              - name: description
+                label: Service description
+                type: text
+      - name: projects
+        label: Projects
+        type: object
+        fields:
+          - name: title
+            label: Section heading
+            type: string
+          - name: description
+            label: Section description
+            type: text
+          - name: items
+            label: Project items
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: image
+                label: Project image path
+                type: image
+                options:
+                  categories: [image]
+              - name: alt
+                label: Image description
+                type: string
+              - name: title
+                label: Project name
+                type: string
+              - name: description
+                label: Project description
+                type: text
+              - name: tags
+                label: Technology and category tags
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "Tag {index}"
+                fields:
+                  - name: value
+                    label: Tag
+                    type: string
+      - name: experience
+        label: Experience and Certifications
+        type: object
+        fields:
+          - name: title
+            label: Section heading
+            type: string
+          - name: description
+            label: Section description
+            type: text
+          - name: jobs
+            label: Work history
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{role}"
+            fields:
+              - name: dates
+                label: Dates
+                type: string
+              - name: role
+                label: Role and company
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: certifications
+            label: Certificates
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: issuer
+                label: Issuer
+                type: string
+              - name: logo
+                label: Issuer logo URL
+                type: string
+              - name: badge
+                label: Badge label
+                type: string
+              - name: title
+                label: Certificate name
+                type: string
+              - name: meta
+                label: Issue date or credential details
+                type: string
+              - name: url
+                label: Certificate link
+                type: string
+      - name: contact
+        label: Contact details
+        type: object
+        fields:
+          - name: title
+            label: Heading
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: email
+            label: Email address
+            type: string
+          - name: github
+            label: GitHub URL
+            type: string
+          - name: linkedin
+            label: LinkedIn URL
+            type: string
+          - name: whatsapp
+            label: WhatsApp URL
+            type: string
+          - name: phone
+            label: Phone display text
+            type: string
+      - name: video
+        label: Featured video
+        type: object
+        fields:
+          - name: youtubeId
+            label: YouTube video ID
+            type: string
+          - name: title
+            label: Section heading
+            type: string
+          - name: description
+            label: Section description
+            type: text
+          - name: iframeTitle
+            label: Accessible video title
+            type: string
+      - name: site
+        label: Search and browser metadata
+        type: object
+        fields:
+          - name: title
+            label: Page title
+            type: string
+          - name: description
+            label: Search description
+            type: text

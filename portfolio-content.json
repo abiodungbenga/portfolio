@@ -1,0 +1,249 @@
+{
+  "hero": {
+    "availability": "Available for New Opportunities",
+    "name": "Gbenga Abiodun",
+    "tagline": "Great apps don't chase downloads; they earn loyalty. I build mobile apps that users love, businesses trust, and teams can confidently scale.",
+    "roles": [
+      { "title": "Flutter Developer" },
+      { "title": "Mobile Software Engineer" },
+      { "title": "Android Engineer" },
+      { "title": "Cross-Platform Expert" },
+      { "title": "Mobile App Architect" },
+      { "title": "UI/UX Engineer" }
+    ],
+    "profileImage": "gbenga-portfolio-dp.png"
+  },
+  "about": {
+    "title": "Architecting High Performance Apps",
+    "description": "Combining engineering rigor with thoughtful product design.",
+    "paragraphs": [
+      {
+        "text": "I'm a mobile developer who builds Flutter and Jetpack Compose applications that are as performant under the hood as they are delightful on screen. My work sits at the intersection of engineering and design: I obsess over system architecture and clean, scalable code, but I never lose sight of the person who'll actually be tapping through the app."
+      },
+      {
+        "text": "I believe great mobile experiences come from getting the small things right: smooth animations, intuitive flows, and interfaces that feel effortless, backed by architecture that holds up as products grow. Beyond shipping features, I'm constantly experimenting with new tools and patterns in the Flutter and Compose ecosystems to keep my craft sharp. What drives me isn't just solving technical problems; it's building applications people genuinely enjoy using."
+      }
+    ]
+  },
+  "services": {
+    "title": "What I Can Build For You",
+    "description": "Building modern, scalable mobile applications from concept and design to development, deployment, and ongoing support.",
+    "items": [
+      {
+        "icon": "flutter.png",
+        "iconAlt": "Flutter",
+        "title": "Flutter Mobile Apps",
+        "description": "Cross-platform iOS and Android applications with 60fps performance and a native feel."
+      },
+      {
+        "icon": "https://cdn.simpleicons.org/android/3DDC84",
+        "iconAlt": "Android",
+        "title": "Android with Jetpack Compose",
+        "description": "Modern native Android apps using Kotlin, Jetpack Compose, and scalable architecture."
+      },
+      {
+        "icon": "flutter.png",
+        "iconAlt": "Flutter",
+        "title": "Flutter Web Applications",
+        "description": "Responsive web experiences that share code directly with mobile applications."
+      },
+      {
+        "icon": "https://cdn.simpleicons.org/firebase/FFCA28",
+        "iconAlt": "Firebase",
+        "title": "Firebase Integration",
+        "description": "Firestore, authentication, cloud functions, realtime data, and push notifications."
+      },
+      {
+        "icon": "https://cdn.simpleicons.org/fastapi/009688",
+        "iconAlt": "REST API",
+        "title": "REST API Integration",
+        "description": "Reliable API clients, caching strategies, and clean network layers."
+      },
+      {
+        "icon": "https://cdn.simpleicons.org/kotlin/7F52FF",
+        "iconAlt": "Kotlin",
+        "title": "Kotlin for Android",
+        "description": "Idiomatic Android development with coroutines, modern APIs, and clean architecture."
+      },
+      {
+        "icon": "jetpack compose.png",
+        "iconAlt": "Jetpack Compose",
+        "title": "Jetpack Compose UI",
+        "description": "Declarative Android interfaces with Material 3 and smooth state-driven motion."
+      },
+      {
+        "icon": "admin_dashboard.png",
+        "iconAlt": "Dashboard",
+        "title": "Admin Dashboards",
+        "description": "Interactive control panels for analytics, administration, and realtime monitoring."
+      },
+      {
+        "icon": "playstore.png",
+        "iconAlt": "App stores",
+        "title": "App Store Deployment",
+        "description": "Publishing to Google Play and Apple App Store with CI/CD workflows."
+      },
+      {
+        "icon": "figma.png",
+        "iconAlt": "Figma",
+        "title": "UI/UX Implementation",
+        "description": "Translating product designs into polished, responsive interfaces."
+      },
+      {
+        "icon": "performance.png",
+        "iconAlt": "Performance",
+        "title": "Performance Optimization",
+        "description": "Improving rendering, memory usage, app startup, and overall responsiveness."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Mobile Applications",
+    "description": "Mobile products built for performance, scalability, and thoughtful user experiences.",
+    "items": [
+      {
+        "image": "4.png",
+        "alt": "WhizToonz Mobile App",
+        "title": "WhizToonz",
+        "description": "A Flutter-based edtech app for kids and teenagers, combining gamified learning, realtime communication, and a polished mobile experience.",
+        "tags": [
+          { "value": "Flutter App" },
+          { "value": "EdTech" },
+          { "value": "Kids Learning" },
+          { "value": "Mobile Platform" },
+          { "value": "Realtime Communication" }
+        ]
+      },
+      {
+        "image": "5.png",
+        "alt": "MyPal App",
+        "title": "MyPal",
+        "description": "A Flutter booking and experience-discovery app designed for users to explore, reserve, and share memorable moments.",
+        "tags": [
+          { "value": "Flutter App" },
+          { "value": "Booking" },
+          { "value": "Experience Discovery" },
+          { "value": "Payments" },
+          { "value": "Realtime Chat" }
+        ]
+      },
+      {
+        "image": "3.png",
+        "alt": "Savory Food App",
+        "title": "Savory",
+        "description": "A modern recipe-discovery app for food lovers, featuring rich browsing, search, favorites, and a premium mobile UI.",
+        "tags": [
+          { "value": "Android" },
+          { "value": "Jetpack Compose" },
+          { "value": "Kotlin" },
+          { "value": "Supabase" }
+        ]
+      },
+      {
+        "image": "2.png",
+        "alt": "Bankee Fintech App",
+        "title": "Bankee",
+        "description": "A digital banking and wealth-management app with account onboarding, balance tracking, and budgeting tools.",
+        "tags": [
+          { "value": "Fintech" },
+          { "value": "Mobile Banking" },
+          { "value": "Jetpack Compose" },
+          { "value": "Kotlin" },
+          { "value": "Firebase" }
+        ]
+      },
+      {
+        "image": "6.png",
+        "alt": "Keke Cruise mobility app",
+        "title": "Keke Cruise",
+        "description": "A mobility and rental platform for seamless booking, live GPS tracking, and realtime rental management.",
+        "tags": [
+          { "value": "Flutter" },
+          { "value": "Mobility" },
+          { "value": "Booking" },
+          { "value": "Location Services" },
+          { "value": "Realtime GPS" }
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "A Career Built on Product Delivery",
+    "description": "Professional experience, product impact, and industry-recognized training.",
+    "jobs": [
+      {
+        "dates": "May 2025 - Feb 2026",
+        "role": "Flutter Developer - Oaks Intelligence Limited",
+        "description": "Led the development of WhizToonz from early builds through launch, balancing a simple user experience with a reliable technical foundation."
+      },
+      {
+        "dates": "Feb 2025 - Apr 2025",
+        "role": "Software Engineer (Flutter) - Kekecruise",
+        "description": "Worked on booking and service-tracking experiences, focusing on dependable flows and thoughtful product details."
+      },
+      {
+        "dates": "Oct 2023 - Feb 2025",
+        "role": "Flutter Developer - MyPal",
+        "description": "Led end-to-end mobile development, integrated REST APIs for realtime synchronization, collaborated with cross-functional teams, and optimized performance."
+      },
+      {
+        "dates": "Mar 2020 - Oct 2025",
+        "role": "Flutter Developer - Innoventa Ltd",
+        "description": "Built and refined product-focused mobile solutions, balancing clean engineering with the interface details users notice."
+      }
+    ],
+    "certifications": [
+      {
+        "issuer": "HP LIFE",
+        "logo": "https://cdn.simpleicons.org/hp/0096D6",
+        "badge": "HP LIFE",
+        "title": "Success Mindset Course",
+        "meta": "Issued: August 2026",
+        "url": "https://www.life-global.org/certificate/3d270a18-9643-4ba1-b6d9-6419e9ade78b"
+      },
+      {
+        "issuer": "HP LIFE",
+        "logo": "https://cdn.simpleicons.org/hp/0096D6",
+        "badge": "HP LIFE",
+        "title": "Critical Thinking in the AI Era",
+        "meta": "Issued: August 2026",
+        "url": "https://www.life-global.org/certificate/0449b4b5-6d69-4888-b4aa-f59743a910f9"
+      },
+      {
+        "issuer": "Simplilearn",
+        "logo": "https://cdn.simpleicons.org/simplilearn/F36F21",
+        "badge": "SkillUp",
+        "title": "Android App Development for Beginners",
+        "meta": "Simplilearn - Mobile Development Foundation",
+        "url": "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjIwIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvMTA0NTMxMTZfMTA3NzUzNjJfMTc4MzY5OTM1MTkyNi5wbmciLCJ1c2VybmFtZSI6IkdiZW5nYSBBYmlvZHVuIn0%3D&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6003%2FAndroid-App-Development-for-Beginners%2Fcertificate%2Fdownload-skillup&%24web_only=true"
+      },
+      {
+        "issuer": "Simplilearn",
+        "logo": "https://cdn.simpleicons.org/simplilearn/F36F21",
+        "badge": "SkillUp",
+        "title": "Introduction to Flutter Course",
+        "meta": "Simplilearn - Cross-platform App Development",
+        "url": "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIyMjk3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvMTA0NTI3ODZfMTA3NzUzNjJfMTc4MzY5NjU0MzMyNi5wbmciLCJ1c2VybmFtZSI6IkdiZW5nYSBBYmlvZHVuIn0%3D&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F4951%2FIntroduction-to-Flutter-Course-Online%2Fcertificate%2Fdownload-skillup&%24web_only=true"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Build Something Great Together",
+    "description": "Have a project in mind or want to discuss a role? Get in touch.",
+    "email": "gbengaemma22@gmail.com",
+    "github": "https://github.com/abiodungbenga",
+    "linkedin": "https://www.linkedin.com/in/abiodemma",
+    "whatsapp": "https://wa.me/2349138186491",
+    "phone": "+234 913 818 6491"
+  },
+  "video": {
+    "youtubeId": "2txwgtWM9-w",
+    "title": "See the work in motion",
+    "description": "A quick introduction to my work, process, and approach to building thoughtful mobile experiences.",
+    "iframeTitle": "Gbenga Abiodun portfolio video"
+  },
+  "site": {
+    "title": "Gbenga Abiodun | Premium Mobile Developer & Flutter Expert",
+    "description": "Portfolio of Gbenga Abiodun, a mobile developer specializing in Flutter, Kotlin, Jetpack Compose, and high-performance mobile experiences."
+  }
+}

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#000000" />
+    <title>Portfolio Admin | Gbenga Abiodun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="admin-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html" aria-label="Portfolio home">
+          <span class="brand-mark">G</span>
+          <span>Gbenga<span class="brand-period">.</span></span>
+        </a>
+
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="sidebar-nav" aria-label="Admin navigation">
+          <a class="sidebar-link active" href="#overview">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+            </svg>
+            Overview
+          </a>
+          <a class="sidebar-link" href="#content">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 4h14a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2V4Z" />
+              <path d="M5 17a2 2 0 0 0 2 2M9 8h8M9 12h8" />
+            </svg>
+            Portfolio content
+          </a>
+          <a class="sidebar-link" href="#analytics">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 19V5M4 19h17" />
+              <path d="m7 15 4-4 3 2 6-7" />
+            </svg>
+            Analytics
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <span class="connection-dot"></span>
+          <span>GitHub Pages</span>
+        </div>
+      </aside>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <div class="breadcrumbs">
+            <span>Workspace</span><span class="crumb-divider">/</span
+            ><strong>Overview</strong>
+          </div>
+          <a class="site-link" href="index.html" target="_blank" rel="noopener">
+            View live site
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 4h6v6M20 4l-9 9" />
+              <path
+                d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"
+              />
+            </svg>
+          </a>
+        </header>
+
+        <section class="page-heading">
+          <div>
+            <p class="eyebrow">PORTFOLIO CONTROL CENTER</p>
+            <h1>Good to see you, Gbenga<span>.</span></h1>
+            <p class="heading-copy">
+              Manage your portfolio content and reporting.
+            </p>
+          </div>
+          <span class="system-status"
+            ><span></span> Site deployed with GitHub Pages</span
+          >
+        </section>
+
+        <section class="summary-grid" aria-label="Portfolio status">
+          <article class="summary-item">
+            <span class="summary-label">CONTENT EDITOR</span>
+            <strong>Ready</strong>
+            <span class="summary-note">GitHub connected editor</span>
+          </article>
+          <article class="summary-item" id="analytics">
+            <span class="summary-label">VISITOR ANALYTICS</span>
+            <strong class="status-pending">Not connected</strong>
+            <span class="summary-note">No visitor data collected</span>
+          </article>
+          <article class="summary-item">
+            <span class="summary-label">REPOSITORY</span>
+            <a
+              class="repo-value"
+              href="https://github.com/abiodungbenga/portfolio"
+              target="_blank"
+              rel="noopener"
+              >abiodungbenga/portfolio</a
+            >
+            <span class="summary-note">GitHub Pages</span>
+          </article>
+        </section>
+
+        <section class="workspace-grid" id="content">
+          <article class="workspace-panel content-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">SITE MANAGEMENT</p>
+                <h2>Portfolio content</h2>
+              </div>
+              <span class="panel-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L8 18l-4 1 1-4Z" />
+                </svg>
+              </span>
+            </div>
+            <p class="panel-copy">
+              Profile, services, projects, career history, credentials, and
+              contact details.
+            </p>
+            <div class="content-tags" aria-label="Editable sections">
+              <span>Profile</span><span>Services</span><span>Projects</span
+              ><span>Experience</span><span>Certificates</span
+              ><span>Contact</span>
+            </div>
+            <a
+              class="button button-primary"
+              href="https://app.pagescms.org/"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L8 18l-4 1 1-4Z" />
+              </svg>
+              Open content editor
+            </a>
+            <p class="panel-footnote">
+              Sign in with GitHub and choose
+              <strong>abiodungbenga/portfolio</strong>.
+            </p>
+          </article>
+
+          <article class="workspace-panel analytics-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">TRAFFIC REPORTS</p>
+                <h2>Visitor analytics</h2>
+              </div>
+              <span class="panel-icon panel-icon-muted">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 19V5M4 19h17" />
+                  <path d="m7 15 4-4 3 2 6-7" />
+                </svg>
+              </span>
+            </div>
+            <div class="analytics-empty">
+              <span class="analytics-mark">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21s7-4.4 7-11V5l-7-3-7 3v5c0 6.6 7 11 7 11Z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </span>
+              <div>
+                <strong>Analytics setup needed</strong>
+                <p>
+                  Visitor counts and locations will appear after an analytics
+                  provider is connected.
+                </p>
+              </div>
+            </div>
+            <a
+              class="button button-secondary"
+              href="https://analytics.google.com/analytics/web/"
+              target="_blank"
+              rel="noopener"
+            >
+              Set up Google Analytics
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </a>
+            <p class="panel-footnote">
+              No sample or estimated traffic is shown here.
+            </p>
+          </article>
+        </section>
+
+        <section class="repository-row">
+          <div>
+            <span class="repo-icon" aria-hidden="true">GH</span>
+            <div>
+              <strong>Source repository</strong
+              ><span
+                >Content changes publish through your GitHub Pages
+                workflow.</span
+              >
+            </div>
+          </div>
+          <a
+            href="https://github.com/abiodungbenga/portfolio"
+            target="_blank"
+            rel="noopener"
+          >
+            Open repository
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7M7 7h10v10" />
+            </svg>
+          </a>
+        </section>
+
+        <footer class="admin-footer">
+          Admin access is handled by GitHub. This page does not store
+          credentials.
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

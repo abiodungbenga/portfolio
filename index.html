@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
+    <title data-content="site.title">
       Gbenga Abiodun | Premium Mobile Developer &amp; Flutter Expert
     </title>
 
     <!-- SEO Metadata -->
     <meta
       name="description"
+      id="site-description"
       content="Portfolio of Gbenga Abiodun - Senior Mobile Developer specializing in Flutter, Native Android (Kotlin and Jetpack Compose), Firebase, and high-performance UI/UX engineering."
     />
     <meta
@@ -225,11 +226,17 @@
         <!-- Left: Text -->
         <div class="hero-text-side">
           <div class="hero-badge reveal-fade-up">
-            <span class="badge-dot"></span> Available for New Opportunities
+            <span class="badge-dot"></span>
+            <span data-content="hero.availability"
+              >Available for New Opportunities</span
+            >
           </div>
 
           <h1 class="hero-title reveal-fade-up">
-            Hi, I'm <span class="name-gradient">Gbenga Abiodun</span>
+            Hi, I'm
+            <span class="name-gradient" data-content="hero.name"
+              >Gbenga Abiodun</span
+            >
           </h1>
 
           <div class="hero-subtitle-wrapper reveal-fade-up">
@@ -238,7 +245,7 @@
             <span class="typing-cursor"></span>
           </div>
 
-          <p class="hero-tagline reveal-fade-up">
+          <p class="hero-tagline reveal-fade-up" data-content="hero.tagline">
             Great apps don't chase downloads they earn loyalty. I build mobile
             apps that users love, businesses trust, and teams can confidently
             scale.
@@ -259,7 +266,7 @@
               </svg>
             </a>
             <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            <a href="gbenga-portfolio-dp.png" download class="btn btn-outline">
+            <a href="Profile.pdf" download class="btn btn-outline">
               <svg
                 width="18"
                 height="18"
@@ -289,6 +296,7 @@
             </a>
             <a
               href="https://www.linkedin.com/in/abiodemma"
+              data-content-href="contact.linkedin"
               target="_blank"
               rel="noopener"
               class="social-icon-btn"
@@ -350,6 +358,7 @@
             <div class="profile-card-inner">
               <img
                 src="gbenga-portfolio-dp.png"
+                data-content-src="hero.profileImage"
                 alt="Gbenga Abiodun – Flutter & Android Developer"
                 class="profile-img"
               />
@@ -364,14 +373,19 @@
       <div class="container">
         <div class="section-header reveal-fade-up">
           <span class="section-tag">About Me</span>
-          <h2 class="section-title">Architecting High Performance Apps</h2>
-          <p class="section-description">
+          <h2 class="section-title" data-content="about.title">
+            Architecting High Performance Apps
+          </h2>
+          <p class="section-description" data-content="about.description">
             Combining engineering rigor with pixel-perfect design aesthetics.
           </p>
         </div>
 
         <div class="about-grid">
-          <div class="about-card reveal-fade-left">
+          <div
+            class="about-card reveal-fade-left"
+            data-content-list="about.paragraphs"
+          >
             <p>
               I'm a mobile developer who builds Flutter and Jetpack Compose
               applications that are as performant under the hood as they are
@@ -435,14 +449,16 @@
       <div class="container">
         <div class="section-header reveal-fade-up">
           <span class="section-tag">Services</span>
-          <h2 class="section-title">What I Can Build For You</h2>
-          <p class="section-description">
+          <h2 class="section-title" data-content="services.title">
+            What I Can Build For You
+          </h2>
+          <p class="section-description" data-content="services.description">
             Building modern, scalable mobile applications from concept and
             design to development, deployment, and ongoing support.
           </p>
         </div>
 
-        <div class="services-grid">
+        <div class="services-grid" data-content-list="services.items">
           <!-- Flutter Mobile Apps -->
           <div class="service-card reveal-fade-up">
             <div class="service-icon">
@@ -936,14 +952,16 @@
       <div class="container">
         <div class="section-header reveal-fade-up">
           <span class="section-tag">Portfolio Showcase</span>
-          <h2 class="section-title">Featured Mobile Applications</h2>
-          <p class="section-description">
+          <h2 class="section-title" data-content="projects.title">
+            Featured Mobile Applications
+          </h2>
+          <p class="section-description" data-content="projects.description">
             High-impact Flutter, Android, fintech, e-learning, and booking apps
             built for performance, scalability, and discoverability.
           </p>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-grid" data-content-list="projects.items">
           <div class="project-card reveal-fade-up">
             <div class="project-img-wrapper">
               <img src="4.png" alt="WhizToonz Mobile App" class="project-img" />
@@ -1109,8 +1127,10 @@
       <div class="container">
         <div class="section-header reveal-fade-up">
           <span class="section-tag">A Closer Look</span>
-          <h2 class="section-title">See the work in motion</h2>
-          <p class="section-description">
+          <h2 class="section-title" data-content="video.title">
+            See the work in motion
+          </h2>
+          <p class="section-description" data-content="video.description">
             A quick introduction to my work, process, and approach to building
             thoughtful mobile experiences.
           </p>
@@ -1118,6 +1138,8 @@
         <div class="video-frame reveal-scale">
           <iframe
             src="https://www.youtube-nocookie.com/embed/2txwgtWM9-w"
+            data-content-video="video.youtubeId"
+            data-content-title="video.iframeTitle"
             title="Gbenga Abiodun portfolio video"
             loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -1141,8 +1163,10 @@
       <div class="container">
         <div class="section-header reveal-fade-up">
           <span class="section-tag">Experience & Credentials</span>
-          <h2 class="section-title">A Career Built on Product Delivery</h2>
-          <p class="section-description">
+          <h2 class="section-title" data-content="experience.title">
+            A Career Built on Product Delivery
+          </h2>
+          <p class="section-description" data-content="experience.description">
             A premium timeline of my professional journey, product impact, and
             industry-recognized training.
           </p>
@@ -1155,7 +1179,7 @@
               <h3 class="experience-card-title">Professional Journey</h3>
             </div>
 
-            <div class="experience-list">
+            <div class="experience-list" data-content-list="experience.jobs">
               <div class="experience-item">
                 <div class="experience-time">May 2025 — Feb 2026</div>
                 <h4 class="experience-role">
@@ -1219,7 +1243,10 @@
               <h3 class="experience-card-title">Recognized Growth</h3>
             </div>
 
-            <div class="certification-list">
+            <div
+              class="certification-list"
+              data-content-list="experience.certifications"
+            >
               <a
                 href="https://www.life-global.org/certificate/3d270a18-9643-4ba1-b6d9-6419e9ade78b"
                 target="_blank"
@@ -1324,8 +1351,10 @@
       <div class="container">
         <div class="section-header reveal-fade-up">
           <span class="section-tag">Get In Touch</span>
-          <h2 class="section-title">Let's Build Something Great Together</h2>
-          <p class="section-description">
+          <h2 class="section-title" data-content="contact.title">
+            Let's Build Something Great Together
+          </h2>
+          <p class="section-description" data-content="contact.description">
             Have a project in mind or want to discuss a role? Drop a message!
           </p>
         </div>
@@ -1333,7 +1362,11 @@
         <div class="contact-grid">
           <!-- Info cards -->
           <div class="contact-info-list reveal-fade-left">
-            <a href="mailto:gbengaemma22@gmail.com" class="contact-info-card">
+            <a
+              href="mailto:gbengaemma22@gmail.com"
+              data-content-href="contact.email"
+              class="contact-info-card"
+            >
               <div class="contact-info-icon">
                 <svg
                   width="22"
@@ -1348,12 +1381,15 @@
               </div>
               <div>
                 <div class="contact-info-label">Direct Email</div>
-                <div class="contact-info-value">gbengaemma22@gmail.com</div>
+                <div class="contact-info-value" data-content="contact.email">
+                  gbengaemma22@gmail.com
+                </div>
               </div>
             </a>
 
             <a
               href="https://github.com/abiodungbenga"
+              data-content-href="contact.github"
               target="_blank"
               rel="noopener"
               class="contact-info-card"
@@ -1426,6 +1462,7 @@
 
             <a
               href="https://wa.me/2349138186491"
+              data-content-href="contact.whatsapp"
               target="_blank"
               rel="noopener"
               class="contact-info-card"
@@ -1444,7 +1481,9 @@
               </div>
               <div>
                 <div class="contact-info-label">WhatsApp</div>
-                <div class="contact-info-value">+234 913 818 6491</div>
+                <div class="contact-info-value" data-content="contact.phone">
+                  +234 913 818 6491
+                </div>
               </div>
             </a>
           </div>
@@ -1539,6 +1578,7 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="admin.html" rel="nofollow">Admin</a></li>
         </ul>
         <div class="footer-copy">
           © 2026 Gbenga Abiodun. All rights reserved.

@@ -4,7 +4,11 @@
  * Vanilla JavaScript ES6+ (No external libraries required)
  */
 
-document.addEventListener("DOMContentLoaded", () => {
+let portfolioContent = null;
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await initPortfolioContent();
+
   // Initialize all interactive modules
   initPreloader();
   initThemeManager();
@@ -43,6 +47,193 @@ function initPreloader() {
       barFill.style.width = `${progress}%`;
     }
   }, 60);
+}
+
+async function initPortfolioContent() {
+  try {
+    const response = await fetch("portfolio-content.json", {
+      cache: "no-cache",
+    });
+    if (!response.ok) return;
+
+    portfolioContent = await response.json();
+    const getValue = (path) =>
+      path.split(".").reduce((value, key) => value?.[key], portfolioContent);
+
+    document.querySelectorAll("[data-content]").forEach((element) => {
+      const value = getValue(element.dataset.content);
+      if (typeof value === "string") element.textContent = value;
+    });
+
+    document.querySelectorAll("[data-content-src]").forEach((element) => {
+      const value = getValue(element.dataset.contentSrc);
+      if (typeof value === "string") element.setAttribute("src", value);
+    });
+
+    document.querySelectorAll("[data-content-href]").forEach((element) => {
+      const path = element.dataset.contentHref;
+      const value = getValue(path);
+      if (typeof value !== "string") return;
+      const href = path === "contact.email" ? `mailto:${value}` : value;
+      if (/^(https?:\/\/|mailto:|\/|\.\/)/i.test(href)) {
+        element.setAttribute("href", href);
+      }
+    });
+
+    document.querySelectorAll("[data-content-video]").forEach((element) => {
+      const videoId = getValue(element.dataset.contentVideo);
+      const title = getValue(element.dataset.contentTitle);
+      if (typeof videoId === "string") {
+        const safeId = videoId.replace(/[^a-zA-Z0-9_-]/g, "");
+        element.setAttribute(
+          "src",
+          `https://www.youtube-nocookie.com/embed/${safeId}`,
+        );
+      }
+      if (typeof title === "string") element.setAttribute("title", title);
+    });
+
+    if (portfolioContent.site?.title) {
+      document.title = portfolioContent.site.title;
+    }
+    if (portfolioContent.site?.description) {
+      document
+        .querySelector('meta[name="description"]')
+        ?.setAttribute("content", portfolioContent.site.description);
+    }
+
+    renderContentList(
+      "about.paragraphs",
+      portfolioContent.about?.paragraphs,
+      (item) => createContentElement("p", "", item.text),
+    );
+    renderContentList(
+      "services.items",
+      portfolioContent.services?.items,
+      createServiceCard,
+    );
+    renderContentList(
+      "projects.items",
+      portfolioContent.projects?.items,
+      createProjectCard,
+    );
+    renderContentList(
+      "experience.jobs",
+      portfolioContent.experience?.jobs,
+      createExperienceItem,
+    );
+    renderContentList(
+      "experience.certifications",
+      portfolioContent.experience?.certifications,
+      createCertificationItem,
+    );
+  } catch {
+    portfolioContent = null;
+  }
+}
+
+function renderContentList(path, items, createItem) {
+  if (!Array.isArray(items)) return;
+
+  document
+    .querySelectorAll(`[data-content-list="${path}"]`)
+    .forEach((container) => {
+      container.replaceChildren(...items.map(createItem));
+    });
+}
+
+function createContentElement(tag, className, text) {
+  const element = document.createElement(tag);
+  if (className) element.className = className;
+  element.textContent = text || "";
+  return element;
+}
+
+function createServiceCard(service) {
+  const card = createContentElement("article", "service-card reveal-fade-up");
+  const icon = createContentElement("div", "service-icon");
+  const image = createContentElement("img", "si-icon");
+  image.src = service.icon || "";
+  image.alt = service.iconAlt || service.title || "";
+  image.loading = "lazy";
+  icon.append(image);
+  card.append(
+    icon,
+    createContentElement("h3", "service-title", service.title),
+    createContentElement("p", "service-desc", service.description),
+  );
+  return card;
+}
+
+function createProjectCard(project) {
+  const card = createContentElement("article", "project-card reveal-fade-up");
+  const imageWrapper = createContentElement("div", "project-img-wrapper");
+  const image = createContentElement("img", "project-img");
+  image.src = project.image || "";
+  image.alt = project.alt || project.title || "";
+  image.loading = "lazy";
+  imageWrapper.append(image, createContentElement("div", "project-overlay"));
+
+  const body = createContentElement("div", "project-body");
+  const chips = createContentElement("div", "project-chips");
+  (project.tags || []).forEach((tag) => {
+    chips.append(createContentElement("span", "chip", tag.value));
+  });
+  body.append(
+    createContentElement("h3", "project-title", project.title),
+    createContentElement("p", "project-desc", project.description),
+    chips,
+  );
+  card.append(imageWrapper, body);
+  return card;
+}
+
+function createExperienceItem(job) {
+  const item = createContentElement("article", "experience-item");
+  item.append(
+    createContentElement("div", "experience-time", job.dates),
+    createContentElement("h4", "experience-role", job.role),
+    createContentElement("p", "experience-desc", job.description),
+  );
+  return item;
+}
+
+function createCertificationItem(certification) {
+  const item = createContentElement("a", "certification-item");
+  const url = certification.url || "#experience";
+  if (/^https:\/\//i.test(url)) {
+    item.href = url;
+    item.target = "_blank";
+    item.rel = "noopener noreferrer";
+  }
+
+  const top = createContentElement("div", "cert-item-top");
+  const issuerClass =
+    certification.issuer === "HP LIFE"
+      ? "cert-logo-hp"
+      : "cert-logo-simplilearn";
+  const logo = createContentElement("span", `cert-logo ${issuerClass}`);
+  const image = createContentElement("img", "issuer-logo");
+  image.src = certification.logo || "";
+  image.alt = `${certification.issuer || "Issuer"} logo`;
+  image.loading = "lazy";
+  const fallback = createContentElement(
+    "span",
+    "issuer-fallback",
+    certification.issuer === "HP LIFE" ? "hp" : "SL",
+  );
+  fallback.setAttribute("aria-hidden", "true");
+  logo.append(image, fallback);
+  top.append(
+    logo,
+    createContentElement("span", "cert-badge", certification.badge),
+  );
+  item.append(
+    top,
+    createContentElement("h4", "cert-title", certification.title),
+    createContentElement("p", "cert-meta", certification.meta),
+  );
+  return item;
 }
 
 /* ==========================================================================
@@ -173,7 +364,7 @@ function initTypingEffect() {
   const typingTarget = document.getElementById("typing-target");
   if (!typingTarget) return;
 
-  const roles = [
+  const fallbackRoles = [
     "Flutter Developer",
     "Mobile Software Engineer",
     "Android Engineer",
@@ -183,6 +374,11 @@ function initTypingEffect() {
     "Firebase Specialist",
     "Problem Solver",
   ];
+  const roles =
+    portfolioContent?.hero?.roles
+      ?.map((role) => role.title)
+      .filter((role) => typeof role === "string" && role.length > 0) ||
+    fallbackRoles;
 
   let roleIndex = 0;
   let charIndex = 0;
