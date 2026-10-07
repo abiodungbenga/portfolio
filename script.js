@@ -236,9 +236,15 @@ function initStaticProjectPreviews() {
         image,
         wrapper.querySelector(".project-overlay") ||
           createContentElement("div", "project-overlay"),
-        createContentElement("span", "project-preview-label", "View app preview"),
+        createContentElement(
+          "span",
+          "project-preview-label",
+          "View app preview",
+        ),
       );
-      previewButton.addEventListener("click", () => projectViewer?.open(project));
+      previewButton.addEventListener("click", () =>
+        projectViewer?.open(project),
+      );
       wrapper.replaceChildren(previewButton);
     });
 }
@@ -253,6 +259,8 @@ function createProjectViewer() {
   const heading = createContentElement("h2", "", "App previews");
   heading.id = "project-viewer-title";
   const count = createContentElement("span", "project-viewer-count");
+  count.setAttribute("aria-live", "polite");
+  count.setAttribute("aria-atomic", "true");
   const closeButton = createContentElement(
     "button",
     "project-viewer-close",
@@ -316,6 +324,7 @@ function createProjectViewer() {
     if (!cover) return;
 
     const title = project.title || "Project";
+    heading.textContent = `${title} app previews`;
     const screenshots = Array.isArray(project.screenshots)
       ? project.screenshots
           .filter(
@@ -352,7 +361,10 @@ function createProjectViewer() {
   });
   dialog.addEventListener("close", () => opener?.focus());
   dialog.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      dialog.close();
+    } else if (event.key === "ArrowLeft") {
       event.preventDefault();
       navigate(-1);
     } else if (event.key === "ArrowRight") {
