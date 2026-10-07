@@ -1108,6 +1108,20 @@ img {
   position: relative;
 }
 
+.project-preview-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
 .project-img {
   width: 100%;
   height: 100%;
@@ -1128,6 +1142,144 @@ img {
     transparent 40%,
     rgba(27, 27, 28, 0.9) 100%
   );
+  pointer-events: none;
+}
+
+.project-preview-label {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  width: fit-content;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.project-preview-trigger:focus-visible {
+  outline: 3px solid var(--primary-glow);
+  outline-offset: -3px;
+}
+
+.project-viewer {
+  width: min(900px, calc(100% - 2rem));
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  overflow: visible;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  color: var(--text-main);
+}
+
+.project-viewer::backdrop {
+  background: rgba(0, 0, 0, 0.86);
+  backdrop-filter: blur(8px);
+}
+
+.project-viewer-panel {
+  display: flex;
+  max-height: calc(100dvh - 2rem);
+  flex-direction: column;
+  padding: 1rem 1.25rem 0.75rem;
+}
+
+.project-viewer-header {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-viewer-header h2 {
+  margin: 0 auto 0 0;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+}
+
+.project-viewer-count {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.project-viewer-close,
+.project-viewer-nav {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.68);
+  color: #fff;
+  cursor: pointer;
+}
+
+.project-viewer-close {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.project-viewer-stage {
+  position: relative;
+  display: grid;
+  min-height: 180px;
+  height: min(68vh, 720px);
+  place-items: center;
+  margin-top: 0.75rem;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.45);
+  touch-action: pan-y;
+}
+
+.project-viewer-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.project-viewer-nav {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 56px;
+  transform: translateY(-50%);
+  border-radius: 8px;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.project-viewer-previous {
+  left: 0.75rem;
+}
+
+.project-viewer-next {
+  right: 0.75rem;
+}
+
+.project-viewer-nav:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.project-viewer-caption {
+  min-height: 1.5em;
+  margin: 0.75rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-align: center;
 }
 
 .project-body {
@@ -2090,9 +2242,26 @@ textarea.form-control {
 .nav-link:focus-visible,
 .btn:focus-visible,
 .theme-toggle-btn:focus-visible,
-.mobile-menu-btn:focus-visible {
+.mobile-menu-btn:focus-visible,
+.project-viewer button:focus-visible {
   outline: 2px solid var(--primary-glow);
   outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .project-viewer {
+    width: calc(100% - 1rem);
+    max-height: calc(100dvh - 1rem);
+  }
+
+  .project-viewer-panel {
+    max-height: calc(100dvh - 1rem);
+    padding: 0.75rem;
+  }
+
+  .project-viewer-stage {
+    height: min(68vh, 620px);
+  }
 }
 
 @media (max-width: 992px) {

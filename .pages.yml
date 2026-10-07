@@ -119,6 +119,22 @@ content:
               - name: description
                 label: Project description
                 type: text
+              - name: screenshots
+                label: Screenshots / app previews
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "Screenshot {index}"
+                fields:
+                  - name: image
+                    label: Screenshot image
+                    type: image
+                    options:
+                      categories: [image]
+                  - name: alt
+                    label: Screenshot description
+                    type: string
               - name: tags
                 label: Technology and category tags
                 type: object

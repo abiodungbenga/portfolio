@@ -5,9 +5,12 @@
  */
 
 let portfolioContent = null;
+let projectViewer = null;
 
 document.addEventListener("DOMContentLoaded", async () => {
+  projectViewer = createProjectViewer();
   await initPortfolioContent();
+  initStaticProjectPreviews();
 
   // Initialize all interactive modules
   initPreloader();
@@ -168,11 +171,27 @@ function createServiceCard(service) {
 function createProjectCard(project) {
   const card = createContentElement("article", "project-card reveal-fade-up");
   const imageWrapper = createContentElement("div", "project-img-wrapper");
+  const previewButton = createContentElement(
+    "button",
+    "project-preview-trigger",
+  );
+  previewButton.type = "button";
+  previewButton.setAttribute(
+    "aria-label",
+    `View ${project.title || "project"} app previews`,
+  );
   const image = createContentElement("img", "project-img");
   image.src = project.image || "";
   image.alt = project.alt || project.title || "";
   image.loading = "lazy";
-  imageWrapper.append(image, createContentElement("div", "project-overlay"));
+  image.draggable = false;
+  previewButton.append(
+    image,
+    createContentElement("div", "project-overlay"),
+    createContentElement("span", "project-preview-label", "View app previews"),
+  );
+  previewButton.addEventListener("click", () => projectViewer?.open(project));
+  imageWrapper.append(previewButton);
 
   const body = createContentElement("div", "project-body");
   const chips = createContentElement("div", "project-chips");
@@ -186,6 +205,178 @@ function createProjectCard(project) {
   );
   card.append(imageWrapper, body);
   return card;
+}
+
+function initStaticProjectPreviews() {
+  document
+    .querySelectorAll(".projects-grid .project-card")
+    .forEach((card) => {
+      if (card.querySelector(".project-preview-trigger")) return;
+
+      const image = card.querySelector(".project-img");
+      const title = card.querySelector(".project-title")?.textContent?.trim();
+      if (!image || !title) return;
+
+      const project = {
+        image: image.getAttribute("src"),
+        alt: image.alt,
+        title,
+      };
+      const wrapper = image.closest(".project-img-wrapper");
+      if (!wrapper) return;
+
+      const previewButton = createContentElement(
+        "button",
+        "project-preview-trigger",
+      );
+      previewButton.type = "button";
+      previewButton.setAttribute("aria-label", `View ${title} app preview`);
+      image.draggable = false;
+      previewButton.append(
+        image,
+        wrapper.querySelector(".project-overlay") ||
+          createContentElement("div", "project-overlay"),
+        createContentElement("span", "project-preview-label", "View app preview"),
+      );
+      previewButton.addEventListener("click", () => projectViewer?.open(project));
+      wrapper.replaceChildren(previewButton);
+    });
+}
+
+function createProjectViewer() {
+  const dialog = document.createElement("dialog");
+  dialog.className = "project-viewer";
+  dialog.setAttribute("aria-labelledby", "project-viewer-title");
+
+  const panel = createContentElement("div", "project-viewer-panel");
+  const header = createContentElement("header", "project-viewer-header");
+  const heading = createContentElement("h2", "", "App previews");
+  heading.id = "project-viewer-title";
+  const count = createContentElement("span", "project-viewer-count");
+  const closeButton = createContentElement(
+    "button",
+    "project-viewer-close",
+    "×",
+  );
+  closeButton.type = "button";
+  closeButton.setAttribute("aria-label", "Close app previews");
+  header.append(heading, count, closeButton);
+
+  const stage = createContentElement("div", "project-viewer-stage");
+  stage.tabIndex = 0;
+  const image = createContentElement("img", "project-viewer-image");
+  image.draggable = false;
+  const previousButton = createContentElement(
+    "button",
+    "project-viewer-nav project-viewer-previous",
+    "‹",
+  );
+  previousButton.type = "button";
+  previousButton.setAttribute("aria-label", "Previous image");
+  const nextButton = createContentElement(
+    "button",
+    "project-viewer-nav project-viewer-next",
+    "›",
+  );
+  nextButton.type = "button";
+  nextButton.setAttribute("aria-label", "Next image");
+  stage.append(image, previousButton, nextButton);
+
+  const caption = createContentElement("p", "project-viewer-caption");
+  panel.append(header, stage, caption);
+  dialog.append(panel);
+  document.body.append(dialog);
+
+  let images = [];
+  let activeIndex = 0;
+  let opener = null;
+  let pointerStart = null;
+
+  const render = () => {
+    const activeImage = images[activeIndex];
+    if (!activeImage) return;
+
+    image.src = activeImage.src;
+    image.alt = activeImage.alt;
+    count.textContent = `${activeIndex + 1} / ${images.length}`;
+    caption.textContent = activeImage.caption;
+    previousButton.disabled = activeIndex === 0;
+    nextButton.disabled = activeIndex === images.length - 1;
+  };
+
+  const navigate = (direction) => {
+    const nextIndex = activeIndex + direction;
+    if (nextIndex < 0 || nextIndex >= images.length) return;
+    activeIndex = nextIndex;
+    render();
+  };
+
+  const open = (project) => {
+    const cover = typeof project.image === "string" ? project.image : "";
+    if (!cover) return;
+
+    const title = project.title || "Project";
+    const screenshots = Array.isArray(project.screenshots)
+      ? project.screenshots
+          .filter(
+            (screenshot) =>
+              screenshot &&
+              typeof screenshot.image === "string" &&
+              screenshot.image.trim(),
+          )
+          .map((screenshot) => ({
+            src: screenshot.image,
+            alt: screenshot.alt || `${title} app screenshot`,
+          }))
+      : [];
+
+    images = [
+      { src: cover, alt: project.alt || `${title} app preview` },
+      ...screenshots,
+    ].map((item) => ({
+      ...item,
+      caption: `${title} — ${item.alt}`,
+    }));
+    activeIndex = 0;
+    opener = document.activeElement;
+    render();
+    dialog.showModal();
+    closeButton.focus();
+  };
+
+  closeButton.addEventListener("click", () => dialog.close());
+  previousButton.addEventListener("click", () => navigate(-1));
+  nextButton.addEventListener("click", () => navigate(1));
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => opener?.focus());
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      navigate(-1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      navigate(1);
+    }
+  });
+  stage.addEventListener("pointerdown", (event) => {
+    if (event.isPrimary) pointerStart = { x: event.clientX, y: event.clientY };
+  });
+  stage.addEventListener("pointerup", (event) => {
+    if (!pointerStart) return;
+    const deltaX = event.clientX - pointerStart.x;
+    const deltaY = event.clientY - pointerStart.y;
+    pointerStart = null;
+    if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      navigate(deltaX < 0 ? 1 : -1);
+    }
+  });
+  stage.addEventListener("pointercancel", () => {
+    pointerStart = null;
+  });
+
+  return { open };
 }
 
 function createExperienceItem(job) {

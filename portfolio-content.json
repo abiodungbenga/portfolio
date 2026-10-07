@@ -106,6 +106,7 @@
         "alt": "WhizToonz Mobile App",
         "title": "WhizToonz",
         "description": "A Flutter-based edtech app for kids and teenagers, combining gamified learning, realtime communication, and a polished mobile experience.",
+        "screenshots": [],
         "tags": [
           { "value": "Flutter App" },
           { "value": "EdTech" },
@@ -119,6 +120,7 @@
         "alt": "MyPal App",
         "title": "MyPal",
         "description": "A Flutter booking and experience-discovery app designed for users to explore, reserve, and share memorable moments.",
+        "screenshots": [],
         "tags": [
           { "value": "Flutter App" },
           { "value": "Booking" },
@@ -132,6 +134,7 @@
         "alt": "Savory Food App",
         "title": "Savory",
         "description": "A modern recipe-discovery app for food lovers, featuring rich browsing, search, favorites, and a premium mobile UI.",
+        "screenshots": [],
         "tags": [
           { "value": "Android" },
           { "value": "Jetpack Compose" },
@@ -144,6 +147,7 @@
         "alt": "Bankee Fintech App",
         "title": "Bankee",
         "description": "A digital banking and wealth-management app with account onboarding, balance tracking, and budgeting tools.",
+        "screenshots": [],
         "tags": [
           { "value": "Fintech" },
           { "value": "Mobile Banking" },
@@ -157,6 +161,7 @@
         "alt": "Keke Cruise mobility app",
         "title": "Keke Cruise",
         "description": "A mobility and rental platform for seamless booking, live GPS tracking, and realtime rental management.",
+        "screenshots": [],
         "tags": [
           { "value": "Flutter" },
           { "value": "Mobility" },
