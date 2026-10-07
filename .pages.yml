@@ -185,8 +185,10 @@ content:
                 label: Issuer
                 type: string
               - name: logo
-                label: Issuer logo URL
-                type: string
+                label: Issuer logo image
+                type: image
+                options:
+                  categories: [image]
               - name: badge
                 label: Badge label
                 type: string
