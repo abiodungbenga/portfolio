@@ -2,16 +2,31 @@
   "hero": {
     "availability": "Available for New Opportunities",
     "name": "Gbenga Abiodun",
-    "tagline": "Great apps don't chase downloads; they earn loyalty. I build mobile apps that users love, businesses trust, and teams can confidently scale.",
+    "tagline": "An app that crashes, launches slowly, or constantly needs patches isn’t something you can build a business on.",
+    "profileImage": "gbenga-portfolio-dp.png",
     "roles": [
-      { "title": "Flutter Developer" },
-      { "title": "Mobile Software Engineer" },
-      { "title": "Android Engineer" },
-      { "title": "Cross-Platform Expert" },
-      { "title": "Mobile App Architect" },
-      { "title": "UI/UX Engineer" }
-    ],
-    "profileImage": "gbenga-portfolio-dp.png"
+      {
+        "title": "Flutter Developer"
+      },
+      {
+        "title": "Kotlin Developer"
+      },
+      {
+        "title": "Mobile Software Engineer"
+      },
+      {
+        "title": "Android Engineer"
+      },
+      {
+        "title": "Cross-Platform Expert"
+      },
+      {
+        "title": "Mobile App Architect"
+      },
+      {
+        "title": "UI/UX Engineer"
+      }
+    ]
   },
   "about": {
     "title": "Architecting High Performance Apps",
@@ -108,11 +123,21 @@
         "description": "A Flutter-based edtech app for kids and teenagers, combining gamified learning, realtime communication, and a polished mobile experience.",
         "screenshots": [],
         "tags": [
-          { "value": "Flutter App" },
-          { "value": "EdTech" },
-          { "value": "Kids Learning" },
-          { "value": "Mobile Platform" },
-          { "value": "Realtime Communication" }
+          {
+            "value": "Flutter App"
+          },
+          {
+            "value": "EdTech"
+          },
+          {
+            "value": "Kids Learning"
+          },
+          {
+            "value": "Mobile Platform"
+          },
+          {
+            "value": "Realtime Communication"
+          }
         ]
       },
       {
@@ -122,11 +147,21 @@
         "description": "A Flutter booking and experience-discovery app designed for users to explore, reserve, and share memorable moments.",
         "screenshots": [],
         "tags": [
-          { "value": "Flutter App" },
-          { "value": "Booking" },
-          { "value": "Experience Discovery" },
-          { "value": "Payments" },
-          { "value": "Realtime Chat" }
+          {
+            "value": "Flutter App"
+          },
+          {
+            "value": "Booking"
+          },
+          {
+            "value": "Experience Discovery"
+          },
+          {
+            "value": "Payments"
+          },
+          {
+            "value": "Realtime Chat"
+          }
         ]
       },
       {
@@ -136,10 +171,18 @@
         "description": "A modern recipe-discovery app for food lovers, featuring rich browsing, search, favorites, and a premium mobile UI.",
         "screenshots": [],
         "tags": [
-          { "value": "Android" },
-          { "value": "Jetpack Compose" },
-          { "value": "Kotlin" },
-          { "value": "Supabase" }
+          {
+            "value": "Android"
+          },
+          {
+            "value": "Jetpack Compose"
+          },
+          {
+            "value": "Kotlin"
+          },
+          {
+            "value": "Supabase"
+          }
         ]
       },
       {
@@ -149,11 +192,21 @@
         "description": "A digital banking and wealth-management app with account onboarding, balance tracking, and budgeting tools.",
         "screenshots": [],
         "tags": [
-          { "value": "Fintech" },
-          { "value": "Mobile Banking" },
-          { "value": "Jetpack Compose" },
-          { "value": "Kotlin" },
-          { "value": "Firebase" }
+          {
+            "value": "Fintech"
+          },
+          {
+            "value": "Mobile Banking"
+          },
+          {
+            "value": "Jetpack Compose"
+          },
+          {
+            "value": "Kotlin"
+          },
+          {
+            "value": "Firebase"
+          }
         ]
       },
       {
@@ -163,11 +216,21 @@
         "description": "A mobility and rental platform for seamless booking, live GPS tracking, and realtime rental management.",
         "screenshots": [],
         "tags": [
-          { "value": "Flutter" },
-          { "value": "Mobility" },
-          { "value": "Booking" },
-          { "value": "Location Services" },
-          { "value": "Realtime GPS" }
+          {
+            "value": "Flutter"
+          },
+          {
+            "value": "Mobility"
+          },
+          {
+            "value": "Booking"
+          },
+          {
+            "value": "Location Services"
+          },
+          {
+            "value": "Realtime GPS"
+          }
         ]
       }
     ]
@@ -248,7 +311,7 @@
     "iframeTitle": "Gbenga Abiodun portfolio video"
   },
   "site": {
-    "title": "Gbenga Abiodun | Premium Mobile Developer & Flutter Expert",
+    "title": "Flutter & Kotlin Developer | I ship Android and iOS apps with real backends and AI integration, then stay for post-launch support | 7+ apps shipped",
     "description": "Portfolio of Gbenga Abiodun, a mobile developer specializing in Flutter, Kotlin, Jetpack Compose, and high-performance mobile experiences."
   }
 }
