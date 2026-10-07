@@ -299,8 +299,8 @@ a:focus-visible {
   font-weight: 600;
 }
 
-.summary-item .status-pending {
-  color: #d2d8d3;
+.summary-item .status-connected {
+  color: var(--green);
 }
 
 .summary-note {
