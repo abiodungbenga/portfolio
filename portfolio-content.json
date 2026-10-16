@@ -121,6 +121,24 @@
         "alt": "WhizToonz Mobile App",
         "title": "WhizToonz",
         "description": "A Flutter-based edtech app for kids and teenagers, combining gamified learning, realtime communication, and a polished mobile experience.",
+        "screenshots": [
+          {
+            "image": "/media/screenshot-6.png",
+            "alt": "Splash Screen"
+          },
+          {
+            "image": "/media/screenshot-7.png",
+            "alt": "Kiddiez Section"
+          },
+          {
+            "image": "/media/screenshot-4.png",
+            "alt": "Toonz Section"
+          },
+          {
+            "image": "/media/screenshot-5.png",
+            "alt": "Auth Page"
+          }
+        ],
         "tags": [
           {
             "value": "Flutter App"
