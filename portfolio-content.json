@@ -121,7 +121,6 @@
         "alt": "WhizToonz Mobile App",
         "title": "WhizToonz",
         "description": "A Flutter-based edtech app for kids and teenagers, combining gamified learning, realtime communication, and a polished mobile experience.",
-        "screenshots": [],
         "tags": [
           {
             "value": "Flutter App"
@@ -145,7 +144,6 @@
         "alt": "MyPal App",
         "title": "MyPal",
         "description": "A Flutter booking and experience-discovery app designed for users to explore, reserve, and share memorable moments.",
-        "screenshots": [],
         "tags": [
           {
             "value": "Flutter App"
@@ -169,7 +167,6 @@
         "alt": "Savory Food App",
         "title": "Savory",
         "description": "A modern recipe-discovery app for food lovers, featuring rich browsing, search, favorites, and a premium mobile UI.",
-        "screenshots": [],
         "tags": [
           {
             "value": "Android"
@@ -190,7 +187,6 @@
         "alt": "Bankee Fintech App",
         "title": "Bankee",
         "description": "A digital banking and wealth-management app with account onboarding, balance tracking, and budgeting tools.",
-        "screenshots": [],
         "tags": [
           {
             "value": "Fintech"
@@ -214,7 +210,6 @@
         "alt": "Keke Cruise mobility app",
         "title": "Keke Cruise",
         "description": "A mobility and rental platform for seamless booking, live GPS tracking, and realtime rental management.",
-        "screenshots": [],
         "tags": [
           {
             "value": "Flutter"
@@ -263,7 +258,7 @@
     "certifications": [
       {
         "issuer": "HP LIFE",
-        "logo": "https://cdn.simpleicons.org/hp/0096D6",
+        "logo": "/media/idkJ43Pg9V_logos.jpeg",
         "badge": "HP LIFE",
         "title": "Success Mindset Course",
         "meta": "Issued: August 2026",
@@ -271,7 +266,7 @@
       },
       {
         "issuer": "HP LIFE",
-        "logo": "https://cdn.simpleicons.org/hp/0096D6",
+        "logo": "/media/idkJ43Pg9V_logos-1.jpeg",
         "badge": "HP LIFE",
         "title": "Critical Thinking in the AI Era",
         "meta": "Issued: August 2026",
@@ -279,7 +274,7 @@
       },
       {
         "issuer": "Simplilearn",
-        "logo": "https://cdn.simpleicons.org/simplilearn/F36F21",
+        "logo": "/media/id08EKVRd__1792144205885.jpeg",
         "badge": "SkillUp",
         "title": "Android App Development for Beginners",
         "meta": "Simplilearn - Mobile Development Foundation",
@@ -287,7 +282,7 @@
       },
       {
         "issuer": "Simplilearn",
-        "logo": "https://cdn.simpleicons.org/simplilearn/F36F21",
+        "logo": "/media/id08EKVRd__1792144205885-1.jpeg",
         "badge": "SkillUp",
         "title": "Introduction to Flutter Course",
         "meta": "Simplilearn - Cross-platform App Development",
